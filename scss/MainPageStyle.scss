@@ -1,3 +1,5 @@
+$anim_dur: .15s;
+
 @font-face {
     font-family: "Source-light";
     src: url("../data/fonts/sourcecodepro/Sourcecodeprolight.ttf") format("ttf"), 
@@ -17,12 +19,338 @@
         url("../data/fonts/sourcecodepro/Sourcecodepromedium.woff2") format("woff2");
 }
 
+// standart (24px, 18px)
+@mixin button_txt_sample($f_s, $p_t) {
+    padding-top: $p_t;
+
+    font-family: 'Source-medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: $f_s;
+    line-height: 30px;
+    text-align: center;
+
+    color: #000000;
+}
+
+// standart (150px, 294px, 291px)
+@mixin logo_sample($m_t, $w, $h) {
+    margin-top: $m_t;
+
+    width: $w;
+    height: $h;
+}
+
+// standart (294px, 68px, 81px, 37px)
+@mixin button_sample($w, $h, $m_t, $b_r) {
+    width: $w;
+    height: $h;
+
+    margin-top: $m_t;
+
+    border-radius: $b_r;
+}
+
+// standart (32px, 27px, 48.5px, 566px)
+@mixin sel_sample($m_t, $m_l, $m_r, $h) {
+    margin-top: $m_t;
+    margin-left: $m_l;
+    margin-right: $m_r;
+
+    height: $h;
+}
+
+@media screen and (min-width: 1621px){
+    .selector{
+        grid-template-columns: 548px 548px 548px;
+
+        width: 1622px;
+        height: 630px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        .sel0, .sel1, .sel2{
+            @include sel_sample(32px, 27px, 48.5px, 566px)
+        }
+
+        .but0, .but1, .but2{
+            @include button_sample(295px, 68px, 81px, 37px)
+        }
+
+        .logo0, .logo1, .logo2{
+            @include logo_sample(150px, 300px, 300px);
+        }
+
+        .txt0, .txt1, .txt2{
+            @include button_txt_sample(24px, 18px);
+        }
+    }
+}
+
+@media screen and (max-width: 1620px){
+    .selector{
+        grid-template-columns: 374px 374px 374px;
+
+        width: 1110px;
+        height: 434px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        .sel0, .sel1, .sel2{
+            @include sel_sample(22px, 18.48px, 32.52px, 388px)
+        }
+
+        .but0, .but1, .but2{
+            @include button_sample(210px, 46px, 30px, 37px)
+        }
+
+        .logo0, .logo1, .logo2{
+            @include logo_sample(110px, 200px, 200px);
+        }
+
+        .txt0, .txt1, .txt2{
+            @include button_txt_sample(17px, 8px);
+        }  
+    }
+}
+
 body{
     background-attachment: fixed;
     background-image: url("../data/img/BGI.jpg");
     background-size: cover;
+
+    margin: 0;
 }
 
 .title{
+    width: auto;
+    height: 240px;
+
+    animation-name: titleon;
+    animation-duration: 4s;
+
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 13px 42px rgba(0, 0, 0, 0.25);
+}
+
+.title_txt0{
+    font-family: 'HL1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 116px;
+    text-align: center;
+
+    color: #FF9900;
+
+    text-shadow: 7px 8px 21px rgba(255, 184, 0, 0.25);
+}
+
+.title_txt1{
+    font-family: 'Source-light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 121px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.selector{
+    display: grid;
+
+    animation-name: selectoron;
+    animation-duration: 3s;
+
+    background: rgba(32, 32, 32, 0.55);
+    box-shadow: 0px 0px 11px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 44px;
+}
+
+.sel0, .sel1, .sel2{
+    background: rgba(84, 84, 84, 0.75);
+    border-radius: 45px;
+}
+
+.sel0{
+    .logo0{
+        display: block;
     
+        margin-left: auto;
+        margin-right: auto;
+
+        transform: translateY(0px);
+
+        animation-name: logodown;
+        animation-duration: $anim_dur;
+    }
+
+    .but0{
+        margin-left: auto;
+        margin-right: auto;
+        
+        box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
+        
+        transform: translateY(0);
+        opacity: 0%;
+
+        animation-name: butdown;
+        animation-duration: $anim_dur;
+    }
+}
+
+.sel0:hover{
+    .logo0{
+        transform: translateY(-75px);
+
+        animation-name: logoup;
+        animation-duration: $anim_dur;
+    }
+
+    .but0{
+        transform: translateY(-75px);
+
+        animation-name: butup;
+        animation-duration: $anim_dur;
+
+        opacity: 100%;
+    }
+}
+
+.sel1{
+    .logo1{
+        display: block;
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+        transform: translateY(0px);
+
+        animation-name: logodown;
+        animation-duration: $anim_dur;
+    }
+
+    .but1{
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
+
+        transform: translateY(0);
+        opacity: 0%;
+
+        animation-name: butdown;
+        animation-duration: $anim_dur;
+        
+    }
+}
+
+.sel1:hover{
+    .logo1{
+        transform: translateY(-75px);
+
+        animation-name: logoup;
+        animation-duration: $anim_dur;
+    }
+
+    .but1{
+        transform: translateY(-75px);
+
+        animation-name: butup;
+        animation-duration: $anim_dur;
+
+        opacity: 100%;
+    }
+}
+
+.sel2{
+    .logo2{
+        display: block;
+    
+        margin-left: auto;
+        margin-right: auto;
+
+        transform: translateY(0px);
+
+        animation-name: logodown;
+        animation-duration: $anim_dur;
+    }
+
+    .but2{ 
+        margin-left: auto;
+        margin-right: auto;
+    
+        box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
+
+        transform: translateY(0);
+        opacity: 0%;
+
+        animation-name: butdown;
+        animation-duration: $anim_dur;
+    }
+}
+
+.sel2:hover{
+    .logo2{
+        transform: translateY(-75px);
+
+        animation-name: logoup;
+        animation-duration: $anim_dur;
+    }
+
+    .but2{
+        transform: translateY(-75px);
+
+        animation-name: butup;
+        animation-duration: $anim_dur;
+
+        opacity: 100%;
+    }
+}
+
+.but0, .but1, .but2{
+    background: #C2C2C2;
+}
+
+.but0:hover, .but1:hover, .but2:hover{
+    background: #8f8f8f;
+
+    cursor: pointer;
+}
+
+@keyframes logoup {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-75px);}
+}
+
+@keyframes butup {
+    from {transform: translateY(0px); opacity: 0%;}
+    to {transform: translateY(-75px); opacity: 100%;}
+}
+
+@keyframes logodown {
+    from {transform: translateY(-75px);}
+    to {transform: translateY(0px);}
+}
+
+@keyframes butdown {
+    from {transform: translateY(-75px); opacity: 100%;}
+    to {transform: translateY(0px); opacity: 0%;}
+}
+
+@keyframes titleon {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes selectoron {
+    0% {opacity: 0%; transform: translateY(50px);}
+    60% {opacity: 0%; transform: translateY(50px);}
+    100% {opacity: 100%; transform: translateY(0px);}
 }

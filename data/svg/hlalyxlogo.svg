@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="506.098" y1="93.905" x2="506.098" y2="403.772" id="gradient-0" gradientTransform="matrix(1.003107, -0.864914, 0.987933, 1.14578, -459.767807, 397.962067)">
+      <stop offset="0" style="stop-color: rgba(165, 165, 165, 1)"/>
+      <stop offset="1" style="stop-color: rgba(114, 114, 114, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="510.617" y1="147.76" x2="510.617" y2="339.369" id="gradient-2" gradientTransform="matrix(1.040293, -0.819814, 1.208287, 1.533242, -576.143204, 281.218719)">
+      <stop offset="0" style="stop-color: rgba(216, 216, 216, 1)"/>
+      <stop offset="1" style="stop-color: rgba(165, 165, 165, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="510.617" y1="147.76" x2="510.617" y2="339.369" id="gradient-1" gradientTransform="matrix(-0.872933, 0.99614, -1.2966, -1.136229, 1036.267014, 64.52903)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgba(92, 92, 92, 1)"/>
+    </linearGradient>
+  </defs>
+  <path d="M 455.877 254.573 C 455.877 367.923 364.006 459.783 250.667 459.783 C 137.328 459.783 45.454 367.924 45.454 254.573 C 45.454 141.237 137.325 49.364 250.667 49.364 C 364.005 49.364 455.877 141.237 455.877 254.573 Z" style="fill: none; stroke: url(#gradient-0); stroke-width: 43px;"/>
+  <path d="M 305.203 374.481 L 254.067 244.882 L 179.096 363.006 L 132.094 363.006 L 236.798 193.928 L 225.043 160.512 L 184.274 160.512 L 184.274 120.695 L 254.063 120.695 L 334.223 324.535 L 369.466 313.054 L 381.21 352.541 L 305.203 374.481 Z" style="stroke: url(#gradient-1); fill: url(#gradient-2);"/>
+</svg>
