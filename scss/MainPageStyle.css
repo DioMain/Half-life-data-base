@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Source-light";
+  src: url("../data/fonts/sourcecodepro/Sourcecodeprolight.ttf") format("ttf"), url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff") format("woff"), url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff2") format("woff2");
+}
+
+.sas {
+  font-size: 30px;
+  font-family: "Source-light";
+}
+
+.anim_block {
+  display: block;
+  position: absolute;
+  background-color: black;
+  height: 100px;
+  width: 100px;
+}
+
+.anim:hover .anim_block {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation-name: dropup;
+          animation-name: dropup;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+}
+
+.anim {
+  height: 100px;
+  width: 100px;
+}
+
+.anim .anim_block {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-animation-name: dropdown;
+          animation-name: dropdown;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+}
+
+@-webkit-keyframes dropup {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dropup {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes dropdown {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
+@keyframes dropdown {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+/*# sourceMappingURL=MainPageStyle.css.map */

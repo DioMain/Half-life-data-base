@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Source-light";
+    src: url("../data/fonts/sourcecodepro/Sourcecodeprolight.ttf") format("ttf"), url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff") format("woff"), url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff2") format("woff2");
+}
+
+.sas {
+    font-size: 30px;
+    font-family: "Source-light";
+}
+
+.anim_block{
+    display: block;
+    position: absolute;
+
+    background-color: black;
+
+    height: 100px;
+    width: 100px;
+}
+
+.anim:hover{
+    .anim_block{
+        transform: translateY(0px);
+
+        animation-name: dropup;
+        animation-duration: 0.25s;
+    }
+}
+
+.anim{
+    height: 100px;
+    width: 100px;
+
+    .anim_block{
+        transform: translateY(50px);
+
+        animation-name: dropdown;
+        animation-duration: 0.25s;
+    }
+}
+
+@keyframes dropup {
+    from { transform: translateY(50px);}
+    to { transform: translateY(0px);}
+}
+
+@keyframes dropdown {
+    from { transform: translateY(0px);}
+    to { transform: translateY(50px);}
+}
