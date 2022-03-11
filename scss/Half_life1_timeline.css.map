@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,yBAAyB;EAC3C,qBAAqB,EAAE,KAAK;EAC5B,eAAe,EAAE,KAAK;EAEtB,MAAM,EAAE,CAAC;CACZ",
     "sources": [
         "Half_life1_timeline.scss"
     ],

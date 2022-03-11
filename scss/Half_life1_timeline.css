@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=Half_life1_timeline.css.map */
+body {
+  background-image: url(../data/img/Art2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+/*# sourceMappingURL=Half_life1_timeline.css.map */
