@@ -1,5 +1,5 @@
 function HL1_href(){
-    window.location.href = 'https://www.youtube.com';
+    window.location.href = 'Half_life1_timeline.html';
 }
 
 function HL2_href(){
