@@ -1,7 +1,190 @@
+@font-face {
+  font-family: "scm";
+  src: url(../data/fonts/sourcecodepro/Sourcecodepromedium.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "scs";
+  src: url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "scl";
+  src: url(../data/fonts/sourcecodepro/Sourcecodeprolight.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodeprolight.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodeprolight.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "scr";
+  src: url(../data/fonts/sourcecodepro/Sourcecodepro.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff2) format("woff2");
+}
+
 body {
   background-image: url(../data/img/Art2.jpg);
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
+}
+
+.rettomenu {
+  position: fixed;
+  width: 141px;
+  height: 71px;
+  left: -44px;
+  top: 9px;
+  background: rgba(138, 138, 138, 0.75);
+  border: 2px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.rettomenu .rettxt {
+  margin-top: 5px;
+  margin-left: 35px;
+  font-family: 'scr';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #121212;
+}
+
+.selectbar {
+  position: fixed;
+  width: 1516px;
+  height: 116px;
+  left: 202px;
+  top: -29px;
+}
+
+.selectbar .selectbarbg {
+  width: inherit;
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 408px 277px 277px 277px 240px;
+      grid-template-columns: 408px 277px 277px 277px 240px;
+  background: rgba(109, 109, 109, 0.6);
+  -webkit-box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
+          box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
+  border-radius: 37px;
+}
+
+.selectbar .selectbarbg .sbbut0 {
+  width: 299px;
+  height: 61px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #C5BFB2;
+  border-radius: 23px;
+}
+
+.selectbar .selectbarbg .sbbut0 .sbbut0t {
+  margin-top: 7.3px;
+  font-family: 'scs';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000000;
+  text-shadow: 1px 0px 3px #7C3400;
+}
+
+.selectbar .selectbarbg .sbbut1 {
+  width: 261px;
+  height: 55px;
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FF5353;
+  border-radius: 23px;
+}
+
+.selectbar .selectbarbg .sbbut1 .sbbut1t {
+  font-family: 'scm';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.selectbar .selectbarbg .sbbut2 {
+  width: 261px;
+  height: 55px;
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #7489D5;
+  border-radius: 23px;
+}
+
+.selectbar .selectbarbg .sbbut2 .sbbut2t {
+  font-family: 'scm';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.selectbar .selectbarbg .sbbut3 {
+  width: 261px;
+  height: 55px;
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #70AB55;
+  border-radius: 23px;
+}
+
+.selectbar .selectbarbg .sbbut3 .sbbut3t {
+  font-family: 'scm';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.selectbar .selectbarbg .sbbut4 {
+  width: 210px;
+  height: 55px;
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFB257;
+  border-radius: 23px;
+}
+
+.selectbar .selectbarbg .sbbut4 .sbbut4t {
+  margin-top: 14px;
+  font-family: 'scm';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 /*# sourceMappingURL=Half_life1_timeline.css.map */
