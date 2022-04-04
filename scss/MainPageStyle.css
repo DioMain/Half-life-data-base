@@ -14,6 +14,19 @@
 }
 
 @media screen and (min-width: 1621px) {
+  .title {
+    height: 240px;
+  }
+  .title_txt0 {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 116px;
+  }
+  .title_txt1 {
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 121px;
+  }
   .selector {
     -ms-grid-columns: 548px 548px 548px;
         grid-template-columns: 548px 548px 548px;
@@ -52,12 +65,56 @@
   }
 }
 
-@media screen and (max-width: 1620px) {
-  .selector {
-    -ms-grid-columns: 374px 374px 374px;
+/*@media screen and (min-width: 1281px) and (max-width: 1620px){
+
+    @include Main_title(200px, 400, 80px, 90px, 300, 80px, 121px);
+
+    .selector{
         grid-template-columns: 374px 374px 374px;
-    width: 1110px;
-    height: 434px;
+
+        width: 1110px;
+        height: 434px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        .sel0, .sel1, .sel2{
+            @include sel_sample(22px, 18.48px, 32.52px, 388px)
+        }
+
+        .but0, .but1, .but2{
+            @include button_sample(210px, 46px, 30px, 37px)
+        }
+
+        .logo0, .logo1, .logo2{
+            @include logo_sample(110px, 200px, 200px);
+        }
+
+        .txt0, .txt1, .txt2{
+            @include button_txt_sample(17px, 8px);
+        }  
+    }
+}*/
+@media screen and (min-width: 1200px) and (max-width: 1620px) {
+  .title {
+    height: 150px;
+  }
+  .title_txt0 {
+    font-weight: 350;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .title_txt1 {
+    font-weight: 275;
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .selector {
+    -ms-grid-columns: 300px 300px 300px;
+        grid-template-columns: 300px 300px 300px;
+    width: 900px;
+    height: 340px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -66,25 +123,79 @@
     margin-top: 22px;
     margin-left: 18.48px;
     margin-right: 32.52px;
-    height: 388px;
+    height: 300px;
   }
   .selector .but0, .selector .but1, .selector .but2 {
-    width: 210px;
-    height: 46px;
+    width: 190px;
+    height: 40px;
     margin-top: 30px;
     border-radius: 37px;
   }
   .selector .logo0, .selector .logo1, .selector .logo2 {
-    margin-top: 110px;
+    margin-top: 80px;
+    width: 150px;
+    height: 150px;
+  }
+  .selector .txt0, .selector .txt1, .selector .txt2 {
+    padding-top: 5px;
+    font-family: 'Source-medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 1199px) {
+  .title {
+    height: 270px;
+  }
+  .title_txt0 {
+    font-weight: 350;
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .title_txt1 {
+    font-weight: 275;
+    font-size: 110px;
+    line-height: 100px;
+  }
+  .selector {
+    -ms-grid-column: 400;
+    grid-column: 400px;
+    -ms-grid-rows: 450px 450px 450px;
+        grid-template-rows: 450px 450px 450px;
+    width: 400px;
+    height: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+  .selector .sel0, .selector .sel1, .selector .sel2 {
+    margin-top: 22px;
+    margin-left: 18.48px;
+    margin-right: 32.52px;
+    height: 400px;
+  }
+  .selector .but0, .selector .but1, .selector .but2 {
+    width: 230px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 37px;
+  }
+  .selector .logo0, .selector .logo1, .selector .logo2 {
+    margin-top: 100px;
     width: 200px;
     height: 200px;
   }
   .selector .txt0, .selector .txt1, .selector .txt2 {
-    padding-top: 8px;
+    padding-top: 12px;
     font-family: 'Source-medium';
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 30px;
     text-align: center;
     color: #000000;
@@ -100,7 +211,6 @@ body {
 
 .title {
   width: auto;
-  height: 240px;
   -webkit-animation-name: titleon;
           animation-name: titleon;
   -webkit-animation-duration: 4s;
@@ -113,9 +223,6 @@ body {
 .title_txt0 {
   font-family: 'HL1';
   font-style: normal;
-  font-weight: 400;
-  font-size: 96px;
-  line-height: 116px;
   text-align: center;
   color: #FF9900;
   text-shadow: 7px 8px 21px rgba(255, 184, 0, 0.25);
@@ -124,9 +231,6 @@ body {
 .title_txt1 {
   font-family: 'Source-light';
   font-style: normal;
-  font-weight: 300;
-  font-size: 96px;
-  line-height: 121px;
   text-align: center;
   color: #FFFFFF;
 }

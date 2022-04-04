@@ -60,7 +60,30 @@ $anim_dur: .15s;
     height: $h;
 }
 
+@mixin Main_title($th, $f_w0, $f_s0, $l_h0, $f_w1, $f_s1, $l_h1) {
+
+    .title{
+        height: $th;
+    }
+    
+
+    .title_txt0{
+        font-weight: $f_w0;
+        font-size: $f_s0;
+        line-height: $l_h0;
+    }
+
+    .title_txt1{
+        font-weight: $f_w1;
+        font-size: $f_s1;
+        line-height: $l_h1;
+    }
+}
+
 @media screen and (min-width: 1621px){
+
+    @include Main_title(240px, 400, 96px, 116px, 300, 96px, 121px);
+
     .selector{
         grid-template-columns: 548px 548px 548px;
 
@@ -89,7 +112,10 @@ $anim_dur: .15s;
     }
 }
 
-@media screen and (max-width: 1620px){
+/*@media screen and (min-width: 1281px) and (max-width: 1620px){
+
+    @include Main_title(200px, 400, 80px, 90px, 300, 80px, 121px);
+
     .selector{
         grid-template-columns: 374px 374px 374px;
 
@@ -116,6 +142,71 @@ $anim_dur: .15s;
             @include button_txt_sample(17px, 8px);
         }  
     }
+}*/
+
+@media screen and (min-width: 1200px) and (max-width: 1620px){
+
+    @include Main_title(150px, 350, 40px, 50px, 275, 60px, 100px);
+
+    .selector{
+        grid-template-columns: 300px 300px 300px;
+
+        width: 900px;
+        height: 340px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        .sel0, .sel1, .sel2{
+            @include sel_sample(22px, 18.48px, 32.52px, 300px)
+        }
+
+        .but0, .but1, .but2{
+            @include button_sample(190px, 40px, 30px, 37px)
+        }
+
+        .logo0, .logo1, .logo2{
+            @include logo_sample(80px, 150px, 150px);
+        }
+
+        .txt0, .txt1, .txt2{
+            @include button_txt_sample(14px, 5px);
+        }  
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 1199px){
+
+    @include Main_title(270px, 350, 80px, 100px, 275, 110px, 100px);
+
+    .selector{
+        grid-column: 400px;
+        grid-template-rows: 450px 450px 450px;
+
+        width: 400px;
+        height: 1350px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        .sel0, .sel1, .sel2{
+            @include sel_sample(22px, 18.48px, 32.52px, 400px)
+        }
+
+        .but0, .but1, .but2{
+            @include button_sample(230px, 60px, 30px, 37px)
+        }
+
+        .logo0, .logo1, .logo2{
+            @include logo_sample(100px, 200px, 200px);
+        }
+
+        .txt0, .txt1, .txt2{
+            @include button_txt_sample(18px, 12px);
+        }  
+    }
 }
 
 body{
@@ -128,7 +219,6 @@ body{
 
 .title{
     width: auto;
-    height: 240px;
 
     animation-name: titleon;
     animation-duration: 4s;
@@ -140,9 +230,6 @@ body{
 .title_txt0{
     font-family: 'HL1';
     font-style: normal;
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 116px;
     text-align: center;
 
     color: #FF9900;
@@ -153,9 +240,6 @@ body{
 .title_txt1{
     font-family: 'Source-light';
     font-style: normal;
-    font-weight: 300;
-    font-size: 96px;
-    line-height: 121px;
     text-align: center;
 
     color: #FFFFFF;
