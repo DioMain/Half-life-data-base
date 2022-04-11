@@ -112,38 +112,6 @@ $anim_dur: .15s;
     }
 }
 
-/*@media screen and (min-width: 1281px) and (max-width: 1620px){
-
-    @include Main_title(200px, 400, 80px, 90px, 300, 80px, 121px);
-
-    .selector{
-        grid-template-columns: 374px 374px 374px;
-
-        width: 1110px;
-        height: 434px;
-    
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-
-        .sel0, .sel1, .sel2{
-            @include sel_sample(22px, 18.48px, 32.52px, 388px)
-        }
-
-        .but0, .but1, .but2{
-            @include button_sample(210px, 46px, 30px, 37px)
-        }
-
-        .logo0, .logo1, .logo2{
-            @include logo_sample(110px, 200px, 200px);
-        }
-
-        .txt0, .txt1, .txt2{
-            @include button_txt_sample(17px, 8px);
-        }  
-    }
-}*/
-
 @media screen and (min-width: 1200px) and (max-width: 1620px){
 
     @include Main_title(150px, 350, 40px, 50px, 275, 60px, 100px);

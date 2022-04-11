@@ -1,5 +1,11 @@
 $sbbuttonborder: 23px;
 
+$sellector_anim_dur: 0.2s;
+$returntomenu_anim_dur: 0.1s;
+
+$sellector_inhideY: -75px;
+$returntomenu_inhideX: -75px;
+
 //Source code medium
 @font-face {
     font-family: "scm";
@@ -67,34 +73,63 @@ body {
     margin: 0;
 }
 
-.rettomenu{
+.ReturnToMenu{
     position: fixed;
+
     width: 141px;
     height: 71px;
     left: -44px;
-    top: 9px;
+    top: 75px;
 
-    background: rgba(138, 138, 138, 0.75);
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 24px;
+    .RTM_bg{       
+        width: 141px;
+        height: 71px;
+    
+        background: rgba(138, 138, 138, 0.75);
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 24px;
+        
+        transform: translateX($returntomenu_inhideX);
 
-    .rettxt{
-        margin-top: 5px;
-        margin-left: 35px;
-    
-        font-family: 'scr';
-        font-style: normal;
-    
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-    
-        text-align: center;
-    
-        letter-spacing: 0.1em;
-    
-        color: #121212;
+        animation-name: return_out;
+        animation-duration: $returntomenu_anim_dur;
+
+        .RTM_txt{
+            margin-top: 5px;
+            margin-left: 35px;
+        
+            font-family: 'scr';
+            font-style: normal;
+        
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+        
+            text-align: center;
+        
+            letter-spacing: 0.1em;
+        
+            color: #121212;
+        }
+    }
+}
+
+.ReturnToMenu:hover {
+    .RTM_bg{
+        transform: translateX(0px);
+
+        animation-name: return_in;
+        animation-duration: $returntomenu_anim_dur;
+    }
+}
+
+.selectbar:hover {
+    .selectbarbg{
+        transform: translateY(0px);
+
+        animation-name: sellector_in;
+        animation-duration: $sellector_anim_dur;
     }
 }
 
@@ -119,6 +154,11 @@ body {
         background: rgba(109, 109, 109, 0.6);
         box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
         border-radius: 37px;
+
+        animation-name: sellector_out;
+        animation-duration: $sellector_anim_dur;
+
+        transform: translateY($sellector_inhideY);
 
         .sbbut0{
             @include _sbbutscale(299px, 61px, 40px);
@@ -213,7 +253,7 @@ body {
     
     @include automargin();
 
-    .title{
+    .tltitle{
         font-family: 'scr';
         
         text-align: center;
@@ -228,5 +268,195 @@ body {
                     1px 4px 6px rgba(124, 60, 0, 0.5), 
                     0px 0px 18px #000000;
     }
+
+    .tlbg{
+        background: rgba(73, 73, 73, 0.85);
+        border-radius: 34px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+
+        width: 1390px;
+
+        .line_contrainer{
+            .date_txt {
+                font-family: 'scm';
+
+                float: left;
+
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 40px;
+
+                color: #FFFFFF;
+
+                writing-mode: vertical-lr;
+            }
+
+            // Распеределение временных надписей времени на тайм-лайне
+            #d1 {
+                margin-left: 94.4px;
+            }
+            #d2 {
+                margin-left: 205px;
+            }
+            #d3{
+                margin-left: 200px;
+            }
+            #d4 {
+                margin-left: 194px;
+            }
+            #d5 {
+                margin-left: 171px;
+            }
+            #d6 {
+                margin-left: 195px;
+            }
+            ////
+
+            .line {
+                width: 1363px;
+                height: 86px;
+
+                margin-top: 75px;
+
+                @include automargin();
+
+                background: #0B0B0B;
+                box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+                border-radius: 37px;
+
+                .date_line {
+                    width: 11px;
+                    height: 110px;
+
+                    background: #1E1E1E;
+                    border-radius: 6px;
+
+                    float: left;
+
+                    transform: translateY(-12px);
+                }
+
+                .date_line_sellecter{
+                    width: 16px;
+                    height: 110px;
+
+                    background: #969696;
+                    border-radius: 6px;
+
+                    float: left;
+
+                    transform: translateY(-12px);
+                }
+
+                // Распеределение временных линий на тайм-лайне
+                #dl1 {
+                    margin-left: 94.4px;
+                }
+                #dls1 {
+                    margin-left: 35px;
+                }
+                #dls2 {
+                    margin-left: 97px;
+                }
+                #dl2 {
+                    margin-left: 70px;
+                }           
+                #dls3 {
+                    margin-left: 35px;
+                }
+                #dl3 {
+                    margin-left: 180px;
+                }
+                #dls4 {
+                    margin-left: 35px;
+                }
+                #dl4 {
+                    margin-left: 170px;
+                }
+                #dl5 {
+                    margin-left: 200px;
+                }
+                #dls5 {
+                    margin-left: 35px;
+                }
+                #dls6 {
+                    margin-left: 97px;
+                }
+                #dl6 {
+                    margin-left: 60px;
+                }
+                ////
+            }
+        }
+
+        .Description {
+            width: 1340px;
+            height: auto;
+
+            padding-left: 25px;
+            padding-right: 25px;
+
+            background: rgba(35, 35, 35, 0.75);
+            border-radius: 27px;
+
+            .DscTitle{              
+                font-family: 'scl';
+                font-size: 90px;
+                text-align: center;
+
+                margin: 0;
+
+                color: #23D735;          
+            }
+
+            .DscInfo {
+                font-family: 'scl';
+                font-size: 22px;
+                
+                color: #FFFFFF;
+            }
+        }
+    }
 }
 
+@keyframes sellector_out {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY($sellector_inhideY);
+    }
+}
+
+@keyframes sellector_in {
+    0% {
+        transform: translateY($sellector_inhideY);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes return_out {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($returntomenu_inhideX);
+    }
+}
+
+@keyframes return_in {
+    0% {
+        transform: translateX($returntomenu_inhideX);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
