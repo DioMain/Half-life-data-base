@@ -101,15 +101,16 @@ body {
 .selectbar{
     position: fixed;
     
-    width: 1516px;
+    width: 100%;
     height: 116px;
 
-    left: 202px;
     top: -29px;
 
     .selectbarbg{
-        width: inherit * 2;
-        height: inherit;
+        width: 1516px;
+        height: 116px;
+
+        @include automargin();
 
         display: grid;
 
@@ -203,3 +204,29 @@ body {
         }
     }
 }
+
+.time_line{
+
+    width: 1490px;
+
+    margin-top: 170px;
+    
+    @include automargin();
+
+    .title{
+        font-family: 'scr';
+        
+        text-align: center;
+
+        font-weight: 400;
+        font-size: 96px;
+        line-height: 121px;
+    
+        color: #FFFFFF;
+    
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
+                    1px 4px 6px rgba(124, 60, 0, 0.5), 
+                    0px 0px 18px #000000;
+    }
+}
+
