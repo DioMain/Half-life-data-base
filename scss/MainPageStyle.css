@@ -13,39 +13,30 @@
   src: url("../data/fonts/sourcecodepro/Sourcecodepromedium.ttf") format("ttf"), url("../data/fonts/sourcecodepro/Sourcecodepromedium.woff") format("woff"), url("../data/fonts/sourcecodepro/Sourcecodepromedium.woff2") format("woff2");
 }
 
-@media screen and (min-width: 1621px) {
+@media screen and (min-width: 1820px) {
   .title {
     height: 240px;
   }
   .title_txt0 {
-    font-weight: 400;
     font-size: 96px;
-    line-height: 116px;
   }
   .title_txt1 {
-    font-weight: 300;
     font-size: 96px;
-    line-height: 121px;
   }
   .selector {
-    -ms-grid-columns: 548px 548px 548px;
-        grid-template-columns: 548px 548px 548px;
-    width: 1622px;
-    height: 630px;
-    margin-left: auto;
-    margin-right: auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto !important;
+        grid-template-rows: auto !important;
+    width: 1500px;
+    height: 550px;
     margin-top: 40px;
-  }
-  .selector .sel0, .selector .sel1, .selector .sel2 {
-    margin-top: 32px;
-    margin-left: 27px;
-    margin-right: 48.5px;
-    height: 566px;
+    grid-gap: 30px;
+    padding: 30px;
   }
   .selector .but0, .selector .but1, .selector .but2 {
     width: 295px;
     height: 68px;
-    margin-top: 81px;
     border-radius: 37px;
   }
   .selector .logo0, .selector .logo1, .selector .logo2 {
@@ -55,119 +46,155 @@
   }
   .selector .txt0, .selector .txt1, .selector .txt2 {
     padding-top: 18px;
-    font-family: 'Source-medium';
-    font-style: normal;
-    font-weight: 500;
     font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    color: #000000;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1620px) {
+@media screen and (min-width: 1500px) and (max-width: 1819px) {
+  .title {
+    height: 200px;
+  }
+  .title_txt0 {
+    font-size: 80px;
+  }
+  .title_txt1 {
+    font-size: 80px;
+  }
+  .selector {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto !important;
+        grid-template-rows: auto !important;
+    width: 1300px;
+    height: 478px;
+    margin-top: 40px;
+    grid-gap: 25px;
+    padding: 25px;
+  }
+  .selector .but0, .selector .but1, .selector .but2 {
+    width: 275px;
+    height: 63px;
+    border-radius: 37px;
+  }
+  .selector .logo0, .selector .logo1, .selector .logo2 {
+    margin-top: 115px;
+    width: 250px;
+    height: 250px;
+  }
+  .selector .txt0, .selector .txt1, .selector .txt2 {
+    padding-top: 16px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1180px) and (max-width: 1499px) {
   .title {
     height: 150px;
   }
   .title_txt0 {
-    font-weight: 350;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 60px;
   }
   .title_txt1 {
-    font-weight: 275;
     font-size: 60px;
-    line-height: 100px;
   }
   .selector {
-    -ms-grid-columns: 300px 300px 300px;
-        grid-template-columns: 300px 300px 300px;
-    width: 900px;
-    height: 340px;
-    margin-left: auto;
-    margin-right: auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto !important;
+        grid-template-rows: auto !important;
+    width: 1000px;
+    height: 368px;
     margin-top: 40px;
-  }
-  .selector .sel0, .selector .sel1, .selector .sel2 {
-    margin-top: 22px;
-    margin-left: 18.48px;
-    margin-right: 32.52px;
-    height: 300px;
+    grid-gap: 17px;
+    padding: 17px;
   }
   .selector .but0, .selector .but1, .selector .but2 {
-    width: 190px;
-    height: 40px;
-    margin-top: 30px;
-    border-radius: 37px;
+    width: 200px;
+    height: 46px;
+    border-radius: 30px;
   }
   .selector .logo0, .selector .logo1, .selector .logo2 {
     margin-top: 80px;
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
   }
   .selector .txt0, .selector .txt1, .selector .txt2 {
-    padding-top: 5px;
-    font-family: 'Source-medium';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-    color: #000000;
+    padding-top: 8px;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width: 1px) and (max-width: 1199px) {
+@media screen and (min-width: 769px) and (max-width: 1179px) {
   .title {
-    height: 270px;
+    height: 150px;
   }
   .title_txt0 {
-    font-weight: 350;
-    font-size: 80px;
-    line-height: 100px;
+    font-size: 60px;
   }
   .title_txt1 {
-    font-weight: 275;
-    font-size: 110px;
-    line-height: 100px;
+    font-size: 60px;
   }
   .selector {
-    -ms-grid-column: 400;
-    grid-column: 400px;
-    -ms-grid-rows: 450px 450px 450px;
-        grid-template-rows: 450px 450px 450px;
-    width: 400px;
-    height: 1350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-  }
-  .selector .sel0, .selector .sel1, .selector .sel2 {
-    margin-top: 22px;
-    margin-left: 18.48px;
-    margin-right: 32.52px;
-    height: 400px;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto !important;
+        grid-template-rows: auto !important;
+    width: 725px;
+    height: 266px;
+    margin-top: 20px;
+    grid-gap: 12px;
+    padding: 12px;
   }
   .selector .but0, .selector .but1, .selector .but2 {
-    width: 230px;
-    height: 60px;
-    margin-top: 30px;
-    border-radius: 37px;
+    width: 150px;
+    height: 34px;
+    border-radius: 15px;
   }
   .selector .logo0, .selector .logo1, .selector .logo2 {
-    margin-top: 100px;
-    width: 200px;
-    height: 200px;
+    margin-top: 75px;
+    width: 125px;
+    height: 125px;
   }
   .selector .txt0, .selector .txt1, .selector .txt2 {
-    padding-top: 12px;
-    font-family: 'Source-medium';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-    color: #000000;
+    padding-top: 3px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    height: 75px;
+  }
+  .title_txt0 {
+    font-size: 28px;
+  }
+  .title_txt1 {
+    font-size: 28px;
+  }
+  .selector {
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto !important;
+        grid-template-columns: auto !important;
+    width: 280px;
+    height: 1000px;
+    margin-top: 50px;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .selector .but0, .selector .but1, .selector .but2 {
+    width: 200px;
+    height: 46px;
+    border-radius: 30px;
+  }
+  .selector .logo0, .selector .logo1, .selector .logo2 {
+    margin-top: 82px;
+    width: 160px;
+    height: 160px;
+  }
+  .selector .txt0, .selector .txt1, .selector .txt2 {
+    padding-top: 7px;
+    font-size: 15px;
   }
 }
 
@@ -189,18 +216,20 @@ body {
           box-shadow: 0px 13px 42px rgba(0, 0, 0, 0.25);
 }
 
-.title_txt0 {
+.title .title_txt0 {
   font-family: 'HL1';
   font-style: normal;
   text-align: center;
   color: #FF9900;
+  line-height: 145%;
   text-shadow: 7px 8px 21px rgba(255, 184, 0, 0.25);
 }
 
-.title_txt1 {
+.title .title_txt1 {
   font-family: 'Source-light';
   font-style: normal;
   text-align: center;
+  line-height: 75%;
   color: #FFFFFF;
 }
 
@@ -215,14 +244,24 @@ body {
   -webkit-box-shadow: 0px 0px 11px 8px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 11px 8px rgba(0, 0, 0, 0.25);
   border-radius: 44px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.sel0, .sel1, .sel2 {
+.selector .txt0, .selector .txt1, .selector .txt2 {
+  font-family: 'Source-medium';
+  font-style: normal;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.selector .sel0, .selector .sel1, .selector .sel2 {
   background: rgba(84, 84, 84, 0.75);
   border-radius: 45px;
 }
 
-.sel0 .logo0 {
+.selector .sel0 .logo0, .selector .sel0 .logo1, .selector .sel0 .logo2, .selector .sel1 .logo0, .selector .sel1 .logo1, .selector .sel1 .logo2, .selector .sel2 .logo0, .selector .sel2 .logo1, .selector .sel2 .logo2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -234,136 +273,43 @@ body {
           animation-duration: 0.15s;
 }
 
-.sel0 .but0 {
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 0%;
-  -webkit-animation-name: butdown;
-          animation-name: butdown;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel0:hover .logo0 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: logoup;
-          animation-name: logoup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel0:hover .but0 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: butup;
-          animation-name: butup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-  opacity: 100%;
-}
-
-.sel1 .logo1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-animation-name: logodown;
-          animation-name: logodown;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel1 .but1 {
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 0%;
-  -webkit-animation-name: butdown;
-          animation-name: butdown;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel1:hover .logo1 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: logoup;
-          animation-name: logoup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel1:hover .but1 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: butup;
-          animation-name: butup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-  opacity: 100%;
-}
-
-.sel2 .logo2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-animation-name: logodown;
-          animation-name: logodown;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel2 .but2 {
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 0%;
-  -webkit-animation-name: butdown;
-          animation-name: butdown;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel2:hover .logo2 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: logoup;
-          animation-name: logoup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-}
-
-.sel2:hover .but2 {
-  -webkit-transform: translateY(-75px);
-          transform: translateY(-75px);
-  -webkit-animation-name: butup;
-          animation-name: butup;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
-  opacity: 100%;
-}
-
-.but0, .but1, .but2 {
+.selector .sel0 .but0, .selector .sel0 .but1, .selector .sel0 .but2, .selector .sel1 .but0, .selector .sel1 .but1, .selector .sel1 .but2, .selector .sel2 .but0, .selector .sel2 .but1, .selector .sel2 .but2 {
   background: #C2C2C2;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0%;
+  -webkit-animation-name: butdown;
+          animation-name: butdown;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
 }
 
-.but0:hover, .but1:hover, .but2:hover {
+.selector .but0:hover, .selector .but1:hover, .selector .but2:hover {
   background: #8f8f8f;
   cursor: pointer;
+}
+
+.selector .sel0:hover .logo0, .selector .sel0:hover .logo1, .selector .sel0:hover .logo2, .selector .sel1:hover .logo0, .selector .sel1:hover .logo1, .selector .sel1:hover .logo2, .selector .sel2:hover .logo0, .selector .sel2:hover .logo1, .selector .sel2:hover .logo2 {
+  -webkit-transform: translateY(-75px);
+          transform: translateY(-75px);
+  -webkit-animation-name: logoup;
+          animation-name: logoup;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
+}
+
+.selector .sel0:hover .but0, .selector .sel0:hover .but1, .selector .sel0:hover .but2, .selector .sel1:hover .but0, .selector .sel1:hover .but1, .selector .sel1:hover .but2, .selector .sel2:hover .but0, .selector .sel2:hover .but1, .selector .sel2:hover .but2 {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation-name: butup;
+          animation-name: butup;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
+  opacity: 100%;
 }
 
 @-webkit-keyframes logoup {
@@ -390,26 +336,26 @@ body {
 
 @-webkit-keyframes butup {
   from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
     opacity: 0%;
   }
   to {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 100%;
   }
 }
 
 @keyframes butup {
   from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
     opacity: 0%;
   }
   to {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 100%;
   }
 }
@@ -438,26 +384,26 @@ body {
 
 @-webkit-keyframes butdown {
   from {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 100%;
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
     opacity: 0%;
   }
 }
 
 @keyframes butdown {
   from {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 100%;
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
     opacity: 0%;
   }
 }
