@@ -62,6 +62,12 @@ $returntomenu_inhideX: -75px;
     text-align: center;
 }
 
+.sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
+.RTM_bg:hover,
+#dls1:hover, #dls2:hover, #dls3:hover, #dls4:hover, #dls5:hover, #dls6:hover {
+    cursor: pointer;
+}
+
 body {
     background-image: url(../data/img/Art2.jpg);
     background-attachment: fixed;
@@ -188,6 +194,10 @@ body {
             }
             
         }
+
+        .sbbut0:hover{
+            box-shadow: 0 0 15px 2px #C5BFB2;
+        }
     
         .sbbut1 {
             @include _sbbutscale(261px, 55px, 46px);
@@ -201,7 +211,11 @@ body {
                 @include _sbbuttxt(20px);   
             }
         }
-    
+        
+        .sbbut1:hover{
+            box-shadow: 0 0 12px 2px #FF5353;
+        }
+
         .sbbut2 {
             @include _sbbutscale(261px, 55px, 46px);
     
@@ -214,7 +228,11 @@ body {
                 @include _sbbuttxt(20px);   
             }
         }
-    
+
+        .sbbut2:hover{
+            box-shadow: 0 0 12px 2px #7489D5;
+        }
+
         .sbbut3 {
             @include _sbbutscale(261px, 55px, 46px);
     
@@ -227,7 +245,11 @@ body {
                 @include _sbbuttxt(20px);   
             }
         }
-    
+
+        .sbbut3:hover{
+            box-shadow: 0 0 12px 2px #70AB55;
+        }
+
         .sbbut4 {
             @include _sbbutscale(210px, 55px, 46px);
     
@@ -242,180 +264,212 @@ body {
                 @include _sbbuttxt(30px);   
             }
         }
+
+        .sbbut4:hover{
+            box-shadow: 0 0 12px 2px #FFB257;
+        }
     }
 }
 
-.time_line{
+.time_line_container{
 
-    width: 1490px;
+    display: block;
+    position: absolute;
 
-    margin-top: 170px;
+    width: 100%;
+    margin-top: 125px;
+
+    .time_line{
+
+        width: 1490px;
     
-    @include automargin();
-
-    .tltitle{
-        font-family: 'scr';
+        @include automargin();
+    
+        .tltitle{
+            font-family: 'scr';
+            
+            text-align: center;
+    
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 121px;
         
-        text-align: center;
-
-        font-weight: 400;
-        font-size: 96px;
-        line-height: 121px;
+            color: #FFFFFF;
+        
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
+                        1px 4px 6px rgba(124, 60, 0, 0.5), 
+                        0px 0px 18px #000000;
+        }
     
-        color: #FFFFFF;
+        .tlbg{
+            background: rgba(73, 73, 73, 0.85);
+            border-radius: 34px;
     
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
-                    1px 4px 6px rgba(124, 60, 0, 0.5), 
-                    0px 0px 18px #000000;
-    }
-
-    .tlbg{
-        background: rgba(73, 73, 73, 0.85);
-        border-radius: 34px;
-
-        padding-left: 50px;
-        padding-right: 50px;
-
-        width: 1390px;
-
-        .line_contrainer{
-            .date_txt {
-                font-family: 'scm';
-
-                float: left;
-
-                font-weight: 500;
-                font-size: 32px;
-                line-height: 40px;
-
-                color: #FFFFFF;
-
-                writing-mode: vertical-lr;
-            }
-
-            // Распеределение временных надписей времени на тайм-лайне
-            #d1 {
-                margin-left: 94.4px;
-            }
-            #d2 {
-                margin-left: 205px;
-            }
-            #d3{
-                margin-left: 200px;
-            }
-            #d4 {
-                margin-left: 194px;
-            }
-            #d5 {
-                margin-left: 171px;
-            }
-            #d6 {
-                margin-left: 195px;
-            }
-            ////
-
-            .line {
-                width: 1363px;
-                height: 86px;
-
-                margin-top: 75px;
-
-                @include automargin();
-
-                background: #0B0B0B;
-                box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
-                border-radius: 37px;
-
-                .date_line {
-                    width: 11px;
-                    height: 110px;
-
-                    background: #1E1E1E;
-                    border-radius: 6px;
-
+            padding-left: 50px;
+            padding-right: 50px;
+    
+            width: 1390px;
+    
+            .line_contrainer{
+                .date_txt {
+                    font-family: 'scm';
+    
                     float: left;
-
-                    transform: translateY(-12px);
+    
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 40px;
+    
+                    color: #FFFFFF;
+    
+                    writing-mode: vertical-lr;
                 }
-
-                .date_line_sellecter{
-                    width: 16px;
-                    height: 110px;
-
-                    background: #969696;
-                    border-radius: 6px;
-
-                    float: left;
-
-                    transform: translateY(-12px);
-                }
-
-                // Распеределение временных линий на тайм-лайне
-                #dl1 {
+    
+                // Распеределение временных надписей времени на тайм-лайне
+                #d1 {
                     margin-left: 94.4px;
                 }
-                #dls1 {
-                    margin-left: 35px;
+                #d2 {
+                    margin-left: 205px;
                 }
-                #dls2 {
-                    margin-left: 97px;
-                }
-                #dl2 {
-                    margin-left: 70px;
-                }           
-                #dls3 {
-                    margin-left: 35px;
-                }
-                #dl3 {
-                    margin-left: 180px;
-                }
-                #dls4 {
-                    margin-left: 35px;
-                }
-                #dl4 {
-                    margin-left: 170px;
-                }
-                #dl5 {
+                #d3{
                     margin-left: 200px;
                 }
-                #dls5 {
-                    margin-left: 35px;
+                #d4 {
+                    margin-left: 194px;
                 }
-                #dls6 {
-                    margin-left: 97px;
+                #d5 {
+                    margin-left: 171px;
                 }
-                #dl6 {
-                    margin-left: 60px;
+                #d6 {
+                    margin-left: 195px;
                 }
                 ////
+    
+                .line {
+                    width: 1363px;
+                    height: 86px;
+    
+                    margin-top: 75px;
+    
+                    @include automargin();
+    
+                    background: #0B0B0B;
+                    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+                    border-radius: 37px;
+    
+                    .date_line {
+                        width: 11px;
+                        height: 110px;
+    
+                        background: #1E1E1E;
+                        border-radius: 6px;
+    
+                        float: left;
+    
+                        transform: translateY(-12px);
+                    }
+    
+                    .date_line_sellecter{
+                        width: 16px;
+                        height: 110px;
+    
+                        background: #969696;
+                        border-radius: 6px;
+    
+                        float: left;
+    
+                        transform: translateY(-12px);
+                    }
+    
+                    // Распеределение временных линий на тайм-лайне
+                    #dl1 {
+                        margin-left: 94.4px;
+                    }
+                    #dls1 {
+                        margin-left: 35px;
+                    }
+                    #dls2 {
+                        margin-left: 97px;
+                    }
+                    #dl2 {
+                        margin-left: 70px;
+                    }           
+                    #dls3 {
+                        margin-left: 35px;
+                    }
+                    #dl3 {
+                        margin-left: 180px;
+                    }
+                    #dls4 {
+                        margin-left: 35px;
+                    }
+                    #dl4 {
+                        margin-left: 170px;
+                    }
+                    #dl5 {
+                        margin-left: 200px;
+                    }
+                    #dls5 {
+                        margin-left: 35px;
+                    }
+                    #dls6 {
+                        margin-left: 97px;
+                    }
+                    #dl6 {
+                        margin-left: 60px;
+                    }
+                    ////
+    
+                    //paint
+                    #dls1:hover {
+                        background: #8df542;
+                    }
+                    #dls2:hover {
+                        background: #f55742;
+                    }
+                    #dls3:hover {
+                        background: goldenrod;
+                    }
+                    #dls4:hover {
+                        background: green;
+                    }
+                    #dls5:hover {
+                        background: #db4f2c;
+                    }
+                    #dls6:hover {
+                        background: #4f45ff;
+                    }
+                    //
+                }
             }
-        }
-
-        .Description {
-            width: 1340px;
-            height: auto;
-
-            padding-left: 25px;
-            padding-right: 25px;
-
-            background: rgba(35, 35, 35, 0.75);
-            border-radius: 27px;
-
-            .DscTitle{              
-                font-family: 'scl';
-                font-size: 90px;
-                text-align: center;
-
-                margin: 0;
-
-                color: #23D735;          
-            }
-
-            .DscInfo {
-                font-family: 'scl';
-                font-size: 22px;
-                
-                color: #FFFFFF;
+    
+            .Description {
+                width: 1340px;
+                height: auto;
+    
+                padding-left: 25px;
+                padding-right: 25px;
+    
+                background: rgba(35, 35, 35, 0.75);
+                border-radius: 27px;
+    
+                .DscTitle{              
+                    font-family: 'scl';
+                    font-size: 90px;
+                    text-align: center;
+    
+                    margin: 0;
+    
+                    color: #23D735;          
+                }
+    
+                .DscInfo {
+                    font-family: 'scl';
+                    font-size: 22px;
+                    
+                    color: #FFFFFF;
+                }
             }
         }
     }

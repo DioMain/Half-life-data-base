@@ -18,6 +18,12 @@
   src: url(../data/fonts/sourcecodepro/Sourcecodepro.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff2) format("woff2");
 }
 
+.sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
+.RTM_bg:hover,
+#dls1:hover, #dls2:hover, #dls3:hover, #dls4:hover, #dls5:hover, #dls6:hover {
+  cursor: pointer;
+}
+
 body {
   background-image: url(../data/img/Art2.jpg);
   background-attachment: fixed;
@@ -137,6 +143,11 @@ body {
   text-shadow: 1px 0px 3px #7C3400;
 }
 
+.selectbar .selectbarbg .sbbut0:hover {
+  -webkit-box-shadow: 0 0 15px 2px #C5BFB2;
+          box-shadow: 0 0 15px 2px #C5BFB2;
+}
+
 .selectbar .selectbarbg .sbbut1 {
   width: 261px;
   height: 55px;
@@ -157,6 +168,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.selectbar .selectbarbg .sbbut1:hover {
+  -webkit-box-shadow: 0 0 12px 2px #FF5353;
+          box-shadow: 0 0 12px 2px #FF5353;
 }
 
 .selectbar .selectbarbg .sbbut2 {
@@ -181,6 +197,11 @@ body {
   text-align: center;
 }
 
+.selectbar .selectbarbg .sbbut2:hover {
+  -webkit-box-shadow: 0 0 12px 2px #7489D5;
+          box-shadow: 0 0 12px 2px #7489D5;
+}
+
 .selectbar .selectbarbg .sbbut3 {
   width: 261px;
   height: 55px;
@@ -201,6 +222,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.selectbar .selectbarbg .sbbut3:hover {
+  -webkit-box-shadow: 0 0 12px 2px #70AB55;
+          box-shadow: 0 0 12px 2px #70AB55;
 }
 
 .selectbar .selectbarbg .sbbut4 {
@@ -226,14 +252,25 @@ body {
   text-align: center;
 }
 
-.time_line {
+.selectbar .selectbarbg .sbbut4:hover {
+  -webkit-box-shadow: 0 0 12px 2px #FFB257;
+          box-shadow: 0 0 12px 2px #FFB257;
+}
+
+.time_line_container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: 125px;
+}
+
+.time_line_container .time_line {
   width: 1490px;
-  margin-top: 170px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.time_line .tltitle {
+.time_line_container .time_line .tltitle {
   font-family: 'scr';
   text-align: center;
   font-weight: 400;
@@ -243,7 +280,7 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 4px 6px rgba(124, 60, 0, 0.5), 0px 0px 18px #000000;
 }
 
-.time_line .tlbg {
+.time_line_container .time_line .tlbg {
   background: rgba(73, 73, 73, 0.85);
   border-radius: 34px;
   padding-left: 50px;
@@ -251,7 +288,7 @@ body {
   width: 1390px;
 }
 
-.time_line .tlbg .line_contrainer .date_txt {
+.time_line_container .time_line .tlbg .line_contrainer .date_txt {
   font-family: 'scm';
   float: left;
   font-weight: 500;
@@ -263,31 +300,31 @@ body {
           writing-mode: vertical-lr;
 }
 
-.time_line .tlbg .line_contrainer #d1 {
+.time_line_container .time_line .tlbg .line_contrainer #d1 {
   margin-left: 94.4px;
 }
 
-.time_line .tlbg .line_contrainer #d2 {
+.time_line_container .time_line .tlbg .line_contrainer #d2 {
   margin-left: 205px;
 }
 
-.time_line .tlbg .line_contrainer #d3 {
+.time_line_container .time_line .tlbg .line_contrainer #d3 {
   margin-left: 200px;
 }
 
-.time_line .tlbg .line_contrainer #d4 {
+.time_line_container .time_line .tlbg .line_contrainer #d4 {
   margin-left: 194px;
 }
 
-.time_line .tlbg .line_contrainer #d5 {
+.time_line_container .time_line .tlbg .line_contrainer #d5 {
   margin-left: 171px;
 }
 
-.time_line .tlbg .line_contrainer #d6 {
+.time_line_container .time_line .tlbg .line_contrainer #d6 {
   margin-left: 195px;
 }
 
-.time_line .tlbg .line_contrainer .line {
+.time_line_container .time_line .tlbg .line_contrainer .line {
   width: 1363px;
   height: 86px;
   margin-top: 75px;
@@ -299,7 +336,7 @@ body {
   border-radius: 37px;
 }
 
-.time_line .tlbg .line_contrainer .line .date_line {
+.time_line_container .time_line .tlbg .line_contrainer .line .date_line {
   width: 11px;
   height: 110px;
   background: #1E1E1E;
@@ -309,7 +346,7 @@ body {
           transform: translateY(-12px);
 }
 
-.time_line .tlbg .line_contrainer .line .date_line_sellecter {
+.time_line_container .time_line .tlbg .line_contrainer .line .date_line_sellecter {
   width: 16px;
   height: 110px;
   background: #969696;
@@ -319,55 +356,79 @@ body {
           transform: translateY(-12px);
 }
 
-.time_line .tlbg .line_contrainer .line #dl1 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl1 {
   margin-left: 94.4px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls1 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls1 {
   margin-left: 35px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls2 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls2 {
   margin-left: 97px;
 }
 
-.time_line .tlbg .line_contrainer .line #dl2 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl2 {
   margin-left: 70px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls3 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls3 {
   margin-left: 35px;
 }
 
-.time_line .tlbg .line_contrainer .line #dl3 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl3 {
   margin-left: 180px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls4 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls4 {
   margin-left: 35px;
 }
 
-.time_line .tlbg .line_contrainer .line #dl4 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl4 {
   margin-left: 170px;
 }
 
-.time_line .tlbg .line_contrainer .line #dl5 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl5 {
   margin-left: 200px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls5 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls5 {
   margin-left: 35px;
 }
 
-.time_line .tlbg .line_contrainer .line #dls6 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls6 {
   margin-left: 97px;
 }
 
-.time_line .tlbg .line_contrainer .line #dl6 {
+.time_line_container .time_line .tlbg .line_contrainer .line #dl6 {
   margin-left: 60px;
 }
 
-.time_line .tlbg .Description {
+.time_line_container .time_line .tlbg .line_contrainer .line #dls1:hover {
+  background: #8df542;
+}
+
+.time_line_container .time_line .tlbg .line_contrainer .line #dls2:hover {
+  background: #f55742;
+}
+
+.time_line_container .time_line .tlbg .line_contrainer .line #dls3:hover {
+  background: goldenrod;
+}
+
+.time_line_container .time_line .tlbg .line_contrainer .line #dls4:hover {
+  background: green;
+}
+
+.time_line_container .time_line .tlbg .line_contrainer .line #dls5:hover {
+  background: #db4f2c;
+}
+
+.time_line_container .time_line .tlbg .line_contrainer .line #dls6:hover {
+  background: #4f45ff;
+}
+
+.time_line_container .time_line .tlbg .Description {
   width: 1340px;
   height: auto;
   padding-left: 25px;
@@ -376,7 +437,7 @@ body {
   border-radius: 27px;
 }
 
-.time_line .tlbg .Description .DscTitle {
+.time_line_container .time_line .tlbg .Description .DscTitle {
   font-family: 'scl';
   font-size: 90px;
   text-align: center;
@@ -384,7 +445,7 @@ body {
   color: #23D735;
 }
 
-.time_line .tlbg .Description .DscInfo {
+.time_line_container .time_line .tlbg .Description .DscInfo {
   font-family: 'scl';
   font-size: 22px;
   color: #FFFFFF;
