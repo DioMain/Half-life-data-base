@@ -50,16 +50,464 @@ $returntomenu_inhideX: -75px;
     margin-top: $m_t;
 }
 
-@mixin _sbbuttxt($f_s) {
-    font-family: 'scm';
-    font-style: normal;
+//In percents
+//(def) = (6%, 4%, 7%, 3.6%, 4%, 11.6%, 12%, 3.7%, 16.8%, 4%, 7%, 3.5%)
+@mixin timeline_lines($l1, $l2, $l3, $l4, $l5, $l6,
+                    $l7, $l8, $l9, $l10, $l11, $l12) {
+    #dl1 {
+        margin-left: $l1;
+    }
+    #dls1 {
+        margin-left: $l2;
+    } 
+    #dls2 {
+        margin-left: $l3;
+    }
+    #dl2 {
+        margin-left: $l4;
+    }           
+    #dls3 {
+        margin-left: $l5;
+    }
+    #dl3 {
+        margin-left: $l6;
+    }
+    #dls4 {
+        margin-left: $l7;
+    }
+    #dl4 {
+        margin-left: $l8;
+    }
+    #dl5 {
+        margin-left: $l9;
+    }
+    #dls5 {
+        margin-left: $l10;
+    }
+    #dls6 {
+        margin-left: $l11;
+    }
+    #dl6 {
+        margin-left: $l12;
+    }
+}
 
-    font-weight: 400;
-    font-size: $f_s;
-    line-height: 25px;
+//(def) = (141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px)
+@mixin return_to_menu($width, $height, $left, $top, $borderr, 
+                    $margint, $marginl, $fontsize) {
+    .ReturnToMenu{
+        width: $width;
+        height: $height;
 
-    align-items: center;
-    text-align: center;
+        left: $left;
+        top: $top;
+
+        .RTM_bg{
+            border-radius: $borderr;
+        }
+
+        .RTM_txt{
+            margin-top: $margint;
+            margin-left: $marginl;
+
+            font-size: $fontsize;
+        }
+    }
+}
+
+//(def) = (116px, -65px, 20px, 37px)
+@mixin select_bar_basic($height, $top, $grid_gap_padding, $borderr) {
+    .selectbar{
+        height: $height;
+        top: $top;
+
+        .selectbarbg{
+            grid-gap: $grid_gap_padding;
+            padding: $grid_gap_padding;
+
+            border-radius: $borderr;
+        }
+    }
+}
+
+@mixin low_animation {
+    .ReturnToMenu{
+        .RTM_bg{                  
+            transform: translateX($returntomenu_inhideX + 35px) !important;  
+            animation-name: return_out_low !important;
+        }
+    }
+
+    .ReturnToMenu:hover{
+        .RTM_bg{                  
+            transform: translateX(0px) !important;  
+            animation-name: return_in_low !important;
+        }
+    }
+
+    .selectbar{  
+        .selectbarbg{   
+            animation-name: sellector_out_low !important;   
+            transform: translateY($sellector_inhideY + 35px) !important;
+        }
+    }
+
+    .selectbar:hover{  
+        .selectbarbg{
+            animation-name: sellector_in_low !important;   
+            transform: translateY(0px) !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1550px) {
+
+    @include return_to_menu(141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px);
+
+    @include select_bar_basic(116px, -65px, 20px, 37px);
+
+    $button_height: 55px;
+    .selectbar{
+        .selectbarbg{
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0{
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t{
+                    margin-top: 8px;
+
+                    font-size: 36px;
+                }
+            }
+
+            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+                @include _sbbutscale(100%, $button_height, auto);
+                
+                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                    font-size: 20px;
+                    margin-top: 7px;
+                }
+            }
+
+            .sbbut4{
+                .sbbut4t{
+                    margin-top: 14px;
+    
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+
+    $tlbg_padding: 50px;
+    $description_padding: 25px;
+    $dateline_offsetY: -12px;
+    .time_line_container{
+        margin-top: 65px;
+
+        .time_line { width: 1490px; }
+        
+        .tltitle  { font-size: 86px; }
+
+        .tlbg{
+            padding-left: $tlbg_padding;
+            padding-right: $tlbg_padding;
+
+            width: 1390px;
+
+            .line_contrainer{
+                .date_txt { font-size: 32px; }
+
+                .line{
+                    height: 86px;
+                    border-radius: 37px;
+                    margin-top: 75px;
+
+                    .date_line { transform: translateY($dateline_offsetY); }
+
+                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+
+                    @include timeline_lines(6%, 4%, 7%, 3.6%, 4%, 11.6%, 
+                                        12%, 3.7%, 16.8%, 4%, 7%, 3.5%);
+                }
+            }
+
+            .Description{
+                padding-left: $description_padding;
+                padding-right: $description_padding;
+
+                border-radius: 27px;
+
+                .DscTitle { font-size: 90px; }    
+    
+                .DscInfo { font-size: 22px; }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+
+    @include return_to_menu(120px, 71px, -35px, 85px, 24px, 10px, 25px, 21px);
+
+    @include select_bar_basic(100px, -50px, 15px, 25px);
+
+    $button_height: 50px;
+    .selectbar{
+        .selectbarbg{
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0{
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t{
+                    margin-top: 7px;
+                    font-size: 28px;
+                }
+            }
+
+            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+                @include _sbbutscale(100%, $button_height, auto);
+                
+                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                    font-size: 18px;
+                    margin-top: 6px;
+                }
+            }
+
+            .sbbut4{
+                .sbbut4t{
+                    font-size: 25px !important;
+                    margin-top: 12px; 
+                }
+            }
+        }
+    }
+
+    $tlbg_padding: 25px;
+    $description_padding: 15px;
+    $dateline_offsetY: -8px;
+    .time_line_container{
+        margin-top: 65px;
+
+        .time_line { width: 1090px; }
+        
+        .tltitle  { font-size: 60px; }
+
+        .tlbg{
+            padding-left: $tlbg_padding;
+            padding-right: $tlbg_padding;
+
+            width: 1040px;
+
+            .line_contrainer{
+                .date_txt { font-size: 24px; }
+
+                .line{
+                    height: 70px;
+                    border-radius: 25px;
+                    margin-top: 55px;
+
+                    .date_line { transform: translateY($dateline_offsetY); }
+
+                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+
+                    @include timeline_lines(6%, 3%, 7%, 3.5%, 4%, 10.9%, 
+                                        11.8%, 3.3%, 16.5%, 4%, 6%, 3.5%);
+                }
+            }
+
+            .Description{
+                padding-left: $description_padding;
+                padding-right: $description_padding;
+
+                border-radius: 27px;
+
+                .DscTitle { font-size: 65px; }    
+    
+                .DscInfo { font-size: 16px; }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1199px) {
+
+    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
+
+    @include select_bar_basic(86px, -60px, 9px, 23px);
+
+    @include low_animation();
+
+    $button_height: 30px;
+    .selectbar{
+        .selectbarbg{
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0{
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t{
+                    margin-top: 7px;
+                    font-size: 14px;
+                }
+            }
+
+            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+                @include _sbbutscale(100%, $button_height, auto);
+                
+                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                    font-size: 12px;
+                    margin-top: 3px;
+                }
+            }
+
+            .sbbut4{
+                .sbbut4t{
+                    font-size: 14px !important;
+                    margin-top: 8px; 
+                }
+            }
+        }
+    }
+
+    $tlbg_padding: 25px;
+    $description_padding: 15px;
+    $dateline_offsetY: -7px;
+    .time_line_container{
+        margin-top: 40px;
+
+        .time_line { width: 690px; }
+        
+        .tltitle  { font-size: 50px; }
+
+        .tlbg{
+            padding-left: $tlbg_padding;
+            padding-right: $tlbg_padding;
+
+            width: 640px;
+
+            .line_contrainer{
+                .date_txt { font-size: 20px; }
+
+                .line{
+                    height: 55px;
+                    border-radius: 20px;
+                    margin-top: 42px;
+
+                    .date_line { transform: translateY($dateline_offsetY); }
+
+                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+
+                    @include timeline_lines(5.9%, 3%, 5%, 2.9%, 4%, 9.3%, 
+                                        10.2%, 3.3%, 15.7%, 4%, 4.5%, 2.5%);
+                }
+            }
+
+            .Description{
+                padding-left: $description_padding;
+                padding-right: $description_padding;
+
+                border-radius: 20px;
+
+                .DscTitle { font-size: 40px; }    
+    
+                .DscInfo { font-size: 12px; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 749px) {
+
+    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
+
+    @include select_bar_basic(60px, -27px, 5px, 16px);
+
+    @include low_animation();
+
+    $button_height: 33px;
+    .selectbar{
+        .selectbarbg{
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0{
+                @include _sbbutscale(100%, $button_height, auto);
+
+                border-radius: 12px !important;
+
+                .sbbut0t{
+                    margin-top: 8px;
+                    font-size: 12px;
+                }
+            }
+
+            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+                @include _sbbutscale(100%, $button_height, auto);
+                
+                border-radius: 12px !important;
+
+                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                    font-size: 9px;
+                    margin-top: 7px;
+                }
+            }
+
+            .sbbut4{
+                .sbbut4t{
+                    font-size: 10px !important;
+                    margin-top: 11px; 
+                }
+            }
+        }
+    }
+
+    $tlbg_padding: 10px;
+    $description_padding: 8px;
+    $dateline_offsetY: -7px;
+    .time_line_container{
+        margin-top: 40px;
+
+        .time_line { width: 390px; }
+        
+        .tltitle  { font-size: 47px; }
+
+        .tlbg{
+            padding-left: $tlbg_padding;
+            padding-right: $tlbg_padding;
+
+            width: 340px;
+
+            .line_contrainer{
+                .date_txt { font-size: 20px; }
+
+                .line{
+                    height: 55px;
+                    border-radius: 20px;
+                    margin-top: 42px;
+
+                    .date_line { transform: translateY($dateline_offsetY); }
+
+                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+
+                    @include timeline_lines(5.8%, 1.5%, 1.5%, 2%, 4%, 5.7%, 
+                                        6%, 3.3%, 14.5%, 1.5%, 1.5%, 2%);
+                }
+            }
+
+            .Description{
+                padding-left: $description_padding;
+                padding-right: $description_padding;
+
+                border-radius: 18px;
+
+                .DscTitle { font-size: 25px; }    
+    
+                .DscInfo { font-size: 9px; }
+            }
+        }
+    }
 }
 
 .sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
@@ -72,9 +520,6 @@ body {
     background-image: url(../data/img/Art2.jpg);
     background-attachment: fixed;
     background-size: cover;
-
-    min-width: 1280px;
-    max-width: 1920px;
     
     margin: 0;
 }
@@ -82,35 +527,25 @@ body {
 .ReturnToMenu{
     position: fixed;
 
-    width: 141px;
-    height: 71px;
-    left: -44px;
-    top: 75px;
-
     .RTM_bg{       
-        width: 141px;
-        height: 71px;
+        width: inherit;
+        height: inherit;
     
         background: rgba(138, 138, 138, 0.75);
         border: 2px solid #000000;
         box-sizing: border-box;
-        border-radius: 24px;
         
         transform: translateX($returntomenu_inhideX);
 
         animation-name: return_out;
         animation-duration: $returntomenu_anim_dur;
 
-        .RTM_txt{
-            margin-top: 5px;
-            margin-left: 35px;
-        
+        .RTM_txt{       
             font-family: 'scr';
             font-style: normal;
         
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 29px;
+            font-weight: bolder;
+            line-height: 100%;
         
             text-align: center;
         
@@ -143,23 +578,19 @@ body {
     position: fixed;
     
     width: 100%;
-    height: 116px;
-
-    top: -29px;
 
     .selectbarbg{
-        width: 1516px;
-        height: 116px;
+        width: 75%;
 
         @include automargin();
 
         display: grid;
 
-        grid-template-columns: 408px 277px 277px 277px 240px;
+        height: inherit;
 
         background: rgba(109, 109, 109, 0.6);
         box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
-        border-radius: 37px;
+        border: 1px solid #000000;
 
         animation-name: sellector_out;
         animation-duration: $sellector_anim_dur;
@@ -167,22 +598,17 @@ body {
         transform: translateY($sellector_inhideY);
 
         .sbbut0{
-            @include _sbbutscale(299px, 61px, 40px);
-    
-            @include automargin();
     
             background: #C5BFB2;
+
+            @include automargin();
             border-radius: $sbbuttonborder;
             
             .sbbut0t{
-                margin-top: 7.3px;
-
                 font-family: 'scs';
                 font-style: normal;
-        
-                font-weight: 600;
-                font-size: 36px;
-                line-height: 45px;
+
+                line-height: 100%;
         
                 align-items: center;
                 text-align: center;
@@ -193,78 +619,50 @@ body {
                 text-shadow: 1px 0px 3px #7C3400;
             }
             
+        }     
+    
+        .sbbut1, .sbbut2, .sbbut3, .sbbut4{
+    
+            @include automargin();
+         
+            border-radius: $sbbuttonborder;
+            
+            .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                font-family: 'scm';
+                font-style: normal;
+
+                line-height: 100%;
+
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .sbbut1{
+            background: #FF5353;
+        }
+        .sbbut2{
+            background: #7489D5;
+        }
+        .sbbut3{
+            background: #70AB55;
+        }
+        .sbbut4{
+            background: #FFB257;
         }
 
         .sbbut0:hover{
             box-shadow: 0 0 15px 2px #C5BFB2;
         }
-    
-        .sbbut1 {
-            @include _sbbutscale(261px, 55px, 46px);
-    
-            @include automargin();
-    
-            background: #FF5353;
-            border-radius: $sbbuttonborder;
-            
-            .sbbut1t{
-                @include _sbbuttxt(20px);   
-            }
-        }
-        
         .sbbut1:hover{
             box-shadow: 0 0 12px 2px #FF5353;
         }
-
-        .sbbut2 {
-            @include _sbbutscale(261px, 55px, 46px);
-    
-            @include automargin();
-    
-            background: #7489D5;
-            border-radius: $sbbuttonborder;
-    
-            .sbbut2t{
-                @include _sbbuttxt(20px);   
-            }
-        }
-
         .sbbut2:hover{
             box-shadow: 0 0 12px 2px #7489D5;
         }
-
-        .sbbut3 {
-            @include _sbbutscale(261px, 55px, 46px);
-    
-            @include automargin();
-    
-            background: #70AB55;
-            border-radius: $sbbuttonborder;
-    
-            .sbbut3t{
-                @include _sbbuttxt(20px);   
-            }
-        }
-
         .sbbut3:hover{
             box-shadow: 0 0 12px 2px #70AB55;
         }
-
-        .sbbut4 {
-            @include _sbbutscale(210px, 55px, 46px);
-    
-            @include automargin();
-    
-            background: #FFB257;
-            border-radius: $sbbuttonborder;
-    
-            .sbbut4t{
-                margin-top: 14px;
-
-                @include _sbbuttxt(30px);   
-            }
-        }
-
         .sbbut4:hover{
             box-shadow: 0 0 12px 2px #FFB257;
         }
@@ -277,22 +675,16 @@ body {
     position: absolute;
 
     width: 100%;
-    margin-top: 125px;
 
     .time_line{
-
-        width: 1490px;
-    
         @include automargin();
     
         .tltitle{
             font-family: 'scr';
-            
             text-align: center;
-    
-            font-weight: 400;
-            font-size: 96px;
-            line-height: 121px;
+            font-weight: bold;
+
+            line-height: 100%;
         
             color: #FFFFFF;
         
@@ -305,122 +697,71 @@ body {
             background: rgba(73, 73, 73, 0.85);
             border-radius: 34px;
     
-            padding-left: 50px;
-            padding-right: 50px;
-    
-            width: 1390px;
-    
+            @include automargin();
+
             .line_contrainer{
                 .date_txt {
                     font-family: 'scm';
     
                     float: left;
-    
-                    font-weight: 500;
-                    font-size: 32px;
-                    line-height: 40px;
+
+                    width: 0;
+
+                    line-height: 50%;
     
                     color: #FFFFFF;
     
                     writing-mode: vertical-lr;
                 }
-    
-                // Распеределение временных надписей времени на тайм-лайне
+
                 #d1 {
-                    margin-left: 94.4px;
+                    margin-left: 6%;
                 }
                 #d2 {
-                    margin-left: 205px;
+                    margin-left: 17.6%;
                 }
                 #d3{
-                    margin-left: 200px;
+                    margin-left: 17.6%;
                 }
                 #d4 {
-                    margin-left: 194px;
+                    margin-left: 17.6%;
                 }
                 #d5 {
-                    margin-left: 171px;
+                    margin-left: 17.6%;
                 }
                 #d6 {
-                    margin-left: 195px;
+                    margin-left: 17.6%;
                 }
-                ////
     
                 .line {
-                    width: 1363px;
-                    height: 86px;
-    
-                    margin-top: 75px;
+                    width: 100%;
     
                     @include automargin();
     
                     background: #0B0B0B;
                     box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
-                    border-radius: 37px;
-    
+                    
+
                     .date_line {
                         width: 11px;
-                        height: 110px;
+                        height: 125%;
     
                         background: #1E1E1E;
                         border-radius: 6px;
     
                         float: left;
-    
-                        transform: translateY(-12px);
                     }
     
                     .date_line_sellecter{
                         width: 16px;
-                        height: 110px;
+                        height: 125%;
     
                         background: #969696;
                         border-radius: 6px;
     
                         float: left;
-    
-                        transform: translateY(-12px);
                     }
-    
-                    // Распеределение временных линий на тайм-лайне
-                    #dl1 {
-                        margin-left: 94.4px;
-                    }
-                    #dls1 {
-                        margin-left: 35px;
-                    }
-                    #dls2 {
-                        margin-left: 97px;
-                    }
-                    #dl2 {
-                        margin-left: 70px;
-                    }           
-                    #dls3 {
-                        margin-left: 35px;
-                    }
-                    #dl3 {
-                        margin-left: 180px;
-                    }
-                    #dls4 {
-                        margin-left: 35px;
-                    }
-                    #dl4 {
-                        margin-left: 170px;
-                    }
-                    #dl5 {
-                        margin-left: 200px;
-                    }
-                    #dls5 {
-                        margin-left: 35px;
-                    }
-                    #dls6 {
-                        margin-left: 97px;
-                    }
-                    #dl6 {
-                        margin-left: 60px;
-                    }
-                    ////
-    
+
                     //paint
                     #dls1:hover {
                         background: #8df542;
@@ -445,18 +786,13 @@ body {
             }
     
             .Description {
-                width: 1340px;
+                width: 100% - 3.5775%;
                 height: auto;
     
-                padding-left: 25px;
-                padding-right: 25px;
-    
                 background: rgba(35, 35, 35, 0.75);
-                border-radius: 27px;
     
                 .DscTitle{              
                     font-family: 'scl';
-                    font-size: 90px;
                     text-align: center;
     
                     margin: 0;
@@ -466,7 +802,6 @@ body {
     
                 .DscInfo {
                     font-family: 'scl';
-                    font-size: 22px;
                     
                     color: #FFFFFF;
                 }
@@ -495,6 +830,26 @@ body {
     }
 }
 
+@keyframes sellector_out_low {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY($sellector_inhideY + 35px);
+    }
+}
+
+@keyframes sellector_in_low{
+    0% {
+        transform: translateY($sellector_inhideY + 35px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 @keyframes return_out {
     0% {
         transform: translateX(0px);
@@ -508,6 +863,26 @@ body {
 @keyframes return_in {
     0% {
         transform: translateX($returntomenu_inhideX);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes return_out_low {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($returntomenu_inhideX + 35px);
+    }
+}
+
+@keyframes return_in_low {
+    0% {
+        transform: translateX($returntomenu_inhideX + 35px);
     }
 
     100% {
