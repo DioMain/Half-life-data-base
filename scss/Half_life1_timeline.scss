@@ -160,6 +160,36 @@ $returntomenu_inhideX: -75px;
     }
 }
 
+@mixin  disable_animation {
+    .ReturnToMenu{
+        .RTM_bg{                  
+            transform: translateX(0px) !important;  
+            animation-name: none !important;
+        }
+    }
+
+    .ReturnToMenu:hover{
+        .RTM_bg{                  
+            transform: translateX(0px) !important;  
+            animation-name: none !important;
+        }
+    }
+
+    .selectbar{  
+        .selectbarbg{   
+            animation-name: none !important;   
+            transform: translateY(0px) !important;
+        }
+    }
+
+    .selectbar:hover{  
+        .selectbarbg{
+            animation-name: none !important;   
+            transform: translateY(0px) !important;
+        }
+    }
+}
+
 @media screen and (min-width: 1550px) {
 
     @include return_to_menu(141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px);
@@ -425,7 +455,7 @@ $returntomenu_inhideX: -75px;
 
     @include select_bar_basic(60px, -27px, 5px, 16px);
 
-    @include low_animation();
+    @include disable_animation();
 
     $button_height: 33px;
     .selectbar{
