@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     
     <link rel="stylesheet" href="scss/MainPageStyle.css">
+    <link rel="stylesheet" href="scss/footer.css">
     <link rel="shortcut icon" href="data/svg/h1Logo.svg" type="image/x-icon">
     
     <title>Half-life: data base</title>
 </head>
 
 <body>
+    <!--Лого-->
     <header class="title">
         <div class="title_txt0">HALF-LIFE</div>
         <div class="title_txt1">data base</div>
     </header>
     
 
+    <!--Селектор-->
     <nav class="selector">
+        <!--Half-life 1-->
         <div class="sel0">
             <img class="logo0" src="data/svg/h1Logo.svg">
             
@@ -26,6 +30,7 @@
             </div>
         </div>
 
+        <!--Half-life 2-->
         <div class="sel1">
             <img class="logo1" src="data/svg/h2Logo.svg">
 
@@ -34,6 +39,7 @@
             </div>
         </div>
 
+        <!--Half-life alyx-->
         <div class="sel2">
             <img class="logo2" src="data/svg/hlalyxlogo.svg">
 
@@ -44,12 +50,21 @@
      
     </nav>
 
-    <footer style="display: block; width: 200px; margin-top: 300px; margin-left: auto; margin-right: auto;">
-        <svg width="200" height="50" version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink">
-        <image xlink:href="data/svg/Valve_logo.svg" height="50" stroke="red" stroke-width="5px">
-        </svg>
+    <!--Подвальнья информация-->
+    <footer class="footer_info" style="margin-top: 100px">
+        <a href="https://github.com/DioMain/Half-life-data-base" class="github">
+            <img src="data/img/interface/GitHub W.png">
+        </a>
+
+        <a href="" class="vk">
+            <img src="data/img/interface/VK W.png">
+        </a>
+
+        <svg version="1.1" class="valve_logo"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="data/svg/Valve_logo.svg" height="48" stroke="red" stroke-width="5px">
+        </svg>   
     </footer>
 
     <script src="js/MainPageScript.js"></script>

@@ -43,13 +43,6 @@ $returntomenu_inhideX: -75px;
     margin-right: auto;
 }
 
-@mixin _sbbutscale($w, $h, $m_t) {
-    width: $w;
-    height: $h;
-
-    margin-top: $m_t;
-}
-
 //In percents
 //(def) = (6%, 4%, 7%, 3.6%, 4%, 11.6%, 12%, 3.7%, 16.8%, 4%, 7%, 3.5%)
 @mixin timeline_lines($l1, $l2, $l3, $l4, $l5, $l6,
@@ -92,144 +85,7 @@ $returntomenu_inhideX: -75px;
     }
 }
 
-//(def) = (141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px)
-@mixin return_to_menu($width, $height, $left, $top, $borderr, 
-                    $margint, $marginl, $fontsize) {
-    .ReturnToMenu{
-        width: $width;
-        height: $height;
-
-        left: $left;
-        top: $top;
-
-        .RTM_bg{
-            border-radius: $borderr;
-        }
-
-        .RTM_txt{
-            margin-top: $margint;
-            margin-left: $marginl;
-
-            font-size: $fontsize;
-        }
-    }
-}
-
-//(def) = (116px, -65px, 20px, 37px)
-@mixin select_bar_basic($height, $top, $grid_gap_padding, $borderr) {
-    .selectbar{
-        height: $height;
-        top: $top;
-
-        .selectbarbg{
-            grid-gap: $grid_gap_padding;
-            padding: $grid_gap_padding;
-
-            border-radius: $borderr;
-        }
-    }
-}
-
-@mixin low_animation {
-    .ReturnToMenu{
-        .RTM_bg{                  
-            transform: translateX($returntomenu_inhideX + 35px) !important;  
-            animation-name: return_out_low !important;
-        }
-    }
-
-    .ReturnToMenu:hover{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
-            animation-name: return_in_low !important;
-        }
-    }
-
-    .selectbar{  
-        .selectbarbg{   
-            animation-name: sellector_out_low !important;   
-            transform: translateY($sellector_inhideY + 35px) !important;
-        }
-    }
-
-    .selectbar:hover{  
-        .selectbarbg{
-            animation-name: sellector_in_low !important;   
-            transform: translateY(0px) !important;
-        }
-    }
-}
-
-@mixin  disable_animation {
-    .ReturnToMenu{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
-            animation-name: none !important;
-        }
-    }
-
-    .ReturnToMenu:hover{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
-            animation-name: none !important;
-        }
-    }
-
-    .selectbar{  
-        .selectbarbg{   
-            animation-name: none !important;   
-            transform: translateY(0px) !important;
-        }
-    }
-
-    .selectbar:hover{  
-        .selectbarbg{
-            animation-name: none !important;   
-            transform: translateY(0px) !important;
-        }
-    }
-}
-
 @media screen and (min-width: 1550px) {
-
-    @include return_to_menu(141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px);
-
-    @include select_bar_basic(116px, -65px, 20px, 37px);
-
-    $button_height: 55px;
-    .selectbar{
-        .selectbarbg{
-            grid-template-columns: auto auto auto auto auto;
-
-            .sbbut0{
-                @include _sbbutscale(100%, $button_height, auto);
-
-                .sbbut0t{
-                    margin-top: 8px;
-
-                    font-size: 36px;
-                }
-            }
-
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
-                @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
-                    font-size: 20px;
-                    margin-top: 7px;
-                }
-            }
-
-            .sbbut4{
-                .sbbut4t{
-                    margin-top: 14px;
-    
-                    font-size: 25px !important;
-                }
-            }
-        }
-    }
-
     $tlbg_padding: 50px;
     $description_padding: 25px;
     $dateline_offsetY: -12px;
@@ -278,43 +134,6 @@ $returntomenu_inhideX: -75px;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1549px) {
-
-    @include return_to_menu(120px, 71px, -35px, 85px, 24px, 10px, 25px, 21px);
-
-    @include select_bar_basic(100px, -50px, 15px, 25px);
-
-    $button_height: 50px;
-    .selectbar{
-        .selectbarbg{
-            grid-template-columns: auto auto auto auto auto;
-
-            .sbbut0{
-                @include _sbbutscale(100%, $button_height, auto);
-
-                .sbbut0t{
-                    margin-top: 7px;
-                    font-size: 28px;
-                }
-            }
-
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
-                @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
-                    font-size: 18px;
-                    margin-top: 6px;
-                }
-            }
-
-            .sbbut4{
-                .sbbut4t{
-                    font-size: 25px !important;
-                    margin-top: 12px; 
-                }
-            }
-        }
-    }
-
     $tlbg_padding: 25px;
     $description_padding: 15px;
     $dateline_offsetY: -8px;
@@ -363,45 +182,6 @@ $returntomenu_inhideX: -75px;
 }
 
 @media screen and (min-width: 750px) and (max-width: 1199px) {
-
-    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
-
-    @include select_bar_basic(86px, -60px, 9px, 23px);
-
-    @include low_animation();
-
-    $button_height: 30px;
-    .selectbar{
-        .selectbarbg{
-            grid-template-columns: auto auto auto auto auto;
-
-            .sbbut0{
-                @include _sbbutscale(100%, $button_height, auto);
-
-                .sbbut0t{
-                    margin-top: 7px;
-                    font-size: 14px;
-                }
-            }
-
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
-                @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
-                    font-size: 12px;
-                    margin-top: 3px;
-                }
-            }
-
-            .sbbut4{
-                .sbbut4t{
-                    font-size: 14px !important;
-                    margin-top: 8px; 
-                }
-            }
-        }
-    }
-
     $tlbg_padding: 25px;
     $description_padding: 15px;
     $dateline_offsetY: -7px;
@@ -450,49 +230,6 @@ $returntomenu_inhideX: -75px;
 }
 
 @media screen and (max-width: 749px) {
-
-    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
-
-    @include select_bar_basic(60px, -27px, 5px, 16px);
-
-    @include disable_animation();
-
-    $button_height: 33px;
-    .selectbar{
-        .selectbarbg{
-            grid-template-columns: auto auto auto auto auto;
-
-            .sbbut0{
-                @include _sbbutscale(100%, $button_height, auto);
-
-                border-radius: 12px !important;
-
-                .sbbut0t{
-                    margin-top: 8px;
-                    font-size: 12px;
-                }
-            }
-
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
-                @include _sbbutscale(100%, $button_height, auto);
-                
-                border-radius: 12px !important;
-
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
-                    font-size: 9px;
-                    margin-top: 7px;
-                }
-            }
-
-            .sbbut4{
-                .sbbut4t{
-                    font-size: 10px !important;
-                    margin-top: 11px; 
-                }
-            }
-        }
-    }
-
     $tlbg_padding: 10px;
     $description_padding: 8px;
     $dateline_offsetY: -7px;
@@ -540,8 +277,6 @@ $returntomenu_inhideX: -75px;
     }
 }
 
-.sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
-.RTM_bg:hover,
 #dls1:hover, #dls2:hover, #dls3:hover, #dls4:hover, #dls5:hover, #dls6:hover {
     cursor: pointer;
 }
@@ -554,155 +289,9 @@ body {
     margin: 0;
 }
 
-.ReturnToMenu{
-    position: fixed;
-
-    .RTM_bg{       
-        width: inherit;
-        height: inherit;
-    
-        background: rgba(138, 138, 138, 0.75);
-        border: 2px solid #000000;
-        box-sizing: border-box;
-        
-        transform: translateX($returntomenu_inhideX);
-
-        animation-name: return_out;
-        animation-duration: $returntomenu_anim_dur;
-
-        .RTM_txt{       
-            font-family: 'scr';
-            font-style: normal;
-        
-            font-weight: bolder;
-            line-height: 100%;
-        
-            text-align: center;
-        
-            letter-spacing: 0.1em;
-        
-            color: #121212;
-        }
-    }
-}
-
-.ReturnToMenu:hover {
-    .RTM_bg{
-        transform: translateX(0px);
-
-        animation-name: return_in;
-        animation-duration: $returntomenu_anim_dur;
-    }
-}
-
-.selectbar:hover {
-    .selectbarbg{
-        transform: translateY(0px);
-
-        animation-name: sellector_in;
-        animation-duration: $sellector_anim_dur;
-    }
-}
-
-.selectbar{
-    position: fixed;
-    
-    width: 100%;
-
-    .selectbarbg{
-        width: 75%;
-
-        @include automargin();
-
-        display: grid;
-
-        height: inherit;
-
-        background: rgba(109, 109, 109, 0.6);
-        box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
-        border: 1px solid #000000;
-
-        animation-name: sellector_out;
-        animation-duration: $sellector_anim_dur;
-
-        transform: translateY($sellector_inhideY);
-
-        .sbbut0{
-    
-            background: #C5BFB2;
-
-            @include automargin();
-            border-radius: $sbbuttonborder;
-            
-            .sbbut0t{
-                font-family: 'scs';
-                font-style: normal;
-
-                line-height: 100%;
-        
-                align-items: center;
-                text-align: center;
-                text-decoration-line: underline;
-        
-                color: #000000;
-        
-                text-shadow: 1px 0px 3px #7C3400;
-            }
-            
-        }     
-    
-        .sbbut1, .sbbut2, .sbbut3, .sbbut4{
-    
-            @include automargin();
-         
-            border-radius: $sbbuttonborder;
-            
-            .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
-                font-family: 'scm';
-                font-style: normal;
-
-                line-height: 100%;
-
-                align-items: center;
-                text-align: center;
-            }
-        }
-
-        .sbbut1{
-            background: #FF5353;
-        }
-        .sbbut2{
-            background: #7489D5;
-        }
-        .sbbut3{
-            background: #70AB55;
-        }
-        .sbbut4{
-            background: #FFB257;
-        }
-
-        .sbbut0:hover{
-            box-shadow: 0 0 15px 2px #C5BFB2;
-        }
-        .sbbut1:hover{
-            box-shadow: 0 0 12px 2px #FF5353;
-        }
-        .sbbut2:hover{
-            box-shadow: 0 0 12px 2px #7489D5;
-        }
-        .sbbut3:hover{
-            box-shadow: 0 0 12px 2px #70AB55;
-        }
-        .sbbut4:hover{
-            box-shadow: 0 0 12px 2px #FFB257;
-        }
-    }
-}
-
 .time_line_container{
 
     display: block;
-    position: absolute;
 
     width: 100%;
 
@@ -837,85 +426,5 @@ body {
                 }
             }
         }
-    }
-}
-
-@keyframes sellector_out {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY($sellector_inhideY);
-    }
-}
-
-@keyframes sellector_in {
-    0% {
-        transform: translateY($sellector_inhideY);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes sellector_out_low {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY($sellector_inhideY + 35px);
-    }
-}
-
-@keyframes sellector_in_low{
-    0% {
-        transform: translateY($sellector_inhideY + 35px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes return_out {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX($returntomenu_inhideX);
-    }
-}
-
-@keyframes return_in {
-    0% {
-        transform: translateX($returntomenu_inhideX);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes return_out_low {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX($returntomenu_inhideX + 35px);
-    }
-}
-
-@keyframes return_in_low {
-    0% {
-        transform: translateX($returntomenu_inhideX + 35px);
-    }
-
-    100% {
-        transform: translateX(0px);
     }
 }

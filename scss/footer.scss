@@ -1,0 +1,51 @@
+$size: 48px;
+
+//Source code medium
+@font-face {
+    font-family: "scm";
+    src: url(../data/fonts/sourcecodepro/Sourcecodepromedium.ttf) format("ttf"),
+        url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff) format("woff"),
+        url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff2) format("woff2");
+}
+
+.footer_info {
+    display: flex;
+
+    flex-direction: row;
+    flex: auto;
+
+    width: auto;
+    height: auto;
+
+    padding: 10px;
+
+    background-color: rgba(#000000, 0.25);
+
+    .github {
+        display: flexbox;
+
+        flex-grow: 1;
+    }
+
+    .vk {
+        display: flexbox;
+
+        flex-grow: 100;
+    }
+
+    .github img, .vk img {
+        height: $size;
+        width: $size;
+    }
+
+    .valve_logo {
+        display: flexbox;
+
+        justify-content: right;
+
+        flex-grow: 1;
+
+        height: $size;
+        width: 172px;
+    }
+}

@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="scss/Half_life1_timeline.css">
+    <link rel="stylesheet" href="scss/Interface.css">
+    <link rel="stylesheet" href="scss/footer.css">
     <link rel="shortcut icon" href="data/svg/h1Logo.svg" type="image/x-icon">
 
     <title>Half-life: data base</title>
 </head>
 
 <body>
+    <!--Основной контент страници-->
     <main class="time_line_container">        
-        <div class="time_line">
-            
+        <section class="time_line">          
             <h1 class="tltitle">Half-life time line</h1>
 
             <div class="tlbg">
                 <br><br>
+                
+                <!--Контейнер содержащий тайм-лайн-->
                 <div class="line_contrainer">
                     <div class="date_txt" id="d1">1997</div>
                     <div class="date_txt" id="d2">1998</div>
@@ -28,7 +32,8 @@
 
                     <br>
 
-                    <div class="line">
+                    <!--Сам тайм-лайн с делениями-->
+                    <nav class="line">
                         <div class="date_line" id="dl1"></div>
                         <div class="date_line_sellecter" id="dls1" onmouseenter="sellect(1);"
                             onmousedown="ChangePage('https://www.youtube.com/watch?v=6vczkAoCKwQ');"></div>
@@ -48,10 +53,12 @@
                         <div class="date_line_sellecter" id="dls6" onmouseenter="sellect(6);"
                             onmousedown="ChangePage('https://www.youtube.com/watch?v=VDp00Jlv8Ag');"></div>
                         <div class="date_line" id="dl6"></div>
-                    </div>
+                    </nav>
                 </div>
+
                 <br><br>
 
+                <!--Описание выброного тайм-лайна-->
                 <article class="Description">
                     <h2 class="DscTitle" id="DSC_TITLE">Выберете время...</h2>
 
@@ -63,9 +70,10 @@
 
                 <br>
             </div>
-        </div>          
+        </section>          
     </main> 
 
+<!--Интерфэйс начало-->
     <nav class="ReturnToMenu">
         <div class="RTM_bg" onmousedown="ChangePage('MainPage.html');">
             <div class="RTM_txt">Main menu</div>
@@ -92,6 +100,24 @@
             </div>
         </div>
     </nav>
+<!--Интерфэйс конец-->
+
+    <!--Подвальнья информация-->
+    <footer class="footer_info" style="margin-top: 300px">
+        <a href="https://github.com/DioMain/Half-life-data-base" class="github">
+            <img src="data/img/interface/GitHub W.png">
+        </a>
+
+        <a href="" class="vk">
+            <img src="data/img/interface/VK W.png">
+        </a>
+
+        <svg version="1.1" class="valve_logo"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="data/svg/Valve_logo.svg" height="48" stroke="red" stroke-width="5px">
+        </svg>        
+    </footer>
 
     <script src="js/Half_life1_timeline.js"></script>
 </body>
