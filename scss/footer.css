@@ -34,7 +34,7 @@
           flex-grow: 100;
 }
 
-.footer_info .github img, .footer_info .vk img {
+.footer_info .github a img, .footer_info .vk a img {
   height: 48px;
   width: 48px;
 }
