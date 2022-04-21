@@ -69,7 +69,3 @@ function sellect(value) {
             Dsc_info.innerHTML = "";  
     }
 }
-
-function ChangePage(url){
-    window.location.href = url;
-}
