@@ -46,40 +46,51 @@ $returntomenu_inhideX: -75px;
 //In percents
 //(def) = (6%, 4%, 7%, 3.6%, 4%, 11.6%, 12%, 3.7%, 16.8%, 4%, 7%, 3.5%)
 @mixin timeline_lines($l1, $l2, $l3, $l4, $l5, $l6,
-                    $l7, $l8, $l9, $l10, $l11, $l12) {
+    $l7, $l8, $l9, $l10, $l11, $l12) {
     #dl1 {
         margin-left: $l1;
     }
+
     #dls1 {
         margin-left: $l2;
-    } 
+    }
+
     #dls2 {
         margin-left: $l3;
     }
+
     #dl2 {
         margin-left: $l4;
-    }           
+    }
+
     #dls3 {
         margin-left: $l5;
     }
+
     #dl3 {
         margin-left: $l6;
     }
+
     #dls4 {
         margin-left: $l7;
     }
+
     #dl4 {
         margin-left: $l8;
     }
+
     #dl5 {
         margin-left: $l9;
     }
+
     #dls5 {
         margin-left: $l10;
     }
+
     #dls6 {
         margin-left: $l11;
     }
+
     #dl6 {
         margin-left: $l12;
     }
@@ -89,45 +100,60 @@ $returntomenu_inhideX: -75px;
     $tlbg_padding: 50px;
     $description_padding: 25px;
     $dateline_offsetY: -12px;
-    .time_line_container{
+
+    .time_line_container {
         margin-top: 65px;
 
-        .time_line { width: 1490px; }
-        
-        .tltitle  { font-size: 86px; }
+        .time_line {
+            width: 1490px;
+        }
 
-        .tlbg{
+        .tltitle {
+            font-size: 86px;
+        }
+
+        .tlbg {
             padding-left: $tlbg_padding;
             padding-right: $tlbg_padding;
 
             width: 1390px;
 
-            .line_contrainer{
-                .date_txt { font-size: 32px; }
+            .line_contrainer {
+                .date_txt {
+                    font-size: 32px;
+                }
 
-                .line{
+                .line {
                     height: 86px;
                     border-radius: 37px;
                     margin-top: 75px;
 
-                    .date_line { transform: translateY($dateline_offsetY); }
+                    .date_line {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+                    .date_line_sellecter {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    @include timeline_lines(6%, 4%, 7%, 3.6%, 4%, 11.6%, 
-                                        12%, 3.7%, 16.8%, 4%, 7%, 3.5%);
+                    @include timeline_lines(6%, 4%, 7%, 3.6%, 4%, 11.6%,
+                        12%, 3.7%, 16.8%, 4%, 7%, 3.5%);
                 }
             }
 
-            .Description{
+            .Description {
                 padding-left: $description_padding;
                 padding-right: $description_padding;
 
                 border-radius: 27px;
 
-                .DscTitle { font-size: 90px; }    
-    
-                .DscInfo { font-size: 22px; }
+                .DscTitle {
+                    font-size: 90px;
+                }
+
+                .DscInfo {
+                    font-size: 22px;
+                }
             }
         }
     }
@@ -137,45 +163,60 @@ $returntomenu_inhideX: -75px;
     $tlbg_padding: 25px;
     $description_padding: 15px;
     $dateline_offsetY: -8px;
-    .time_line_container{
+
+    .time_line_container {
         margin-top: 65px;
 
-        .time_line { width: 1090px; }
-        
-        .tltitle  { font-size: 60px; }
+        .time_line {
+            width: 1090px;
+        }
 
-        .tlbg{
+        .tltitle {
+            font-size: 60px;
+        }
+
+        .tlbg {
             padding-left: $tlbg_padding;
             padding-right: $tlbg_padding;
 
             width: 1040px;
 
-            .line_contrainer{
-                .date_txt { font-size: 24px; }
+            .line_contrainer {
+                .date_txt {
+                    font-size: 24px;
+                }
 
-                .line{
+                .line {
                     height: 70px;
                     border-radius: 25px;
                     margin-top: 55px;
 
-                    .date_line { transform: translateY($dateline_offsetY); }
+                    .date_line {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+                    .date_line_sellecter {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    @include timeline_lines(6%, 3%, 7%, 3.5%, 4%, 10.9%, 
-                                        11.8%, 3.3%, 16.5%, 4%, 6%, 3.5%);
+                    @include timeline_lines(6%, 3%, 7%, 3.5%, 4%, 10.9%,
+                        11.8%, 3.3%, 16.5%, 4%, 6%, 3.5%);
                 }
             }
 
-            .Description{
+            .Description {
                 padding-left: $description_padding;
                 padding-right: $description_padding;
 
                 border-radius: 27px;
 
-                .DscTitle { font-size: 65px; }    
-    
-                .DscInfo { font-size: 16px; }
+                .DscTitle {
+                    font-size: 65px;
+                }
+
+                .DscInfo {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -185,45 +226,60 @@ $returntomenu_inhideX: -75px;
     $tlbg_padding: 25px;
     $description_padding: 15px;
     $dateline_offsetY: -7px;
-    .time_line_container{
+
+    .time_line_container {
         margin-top: 40px;
 
-        .time_line { width: 690px; }
-        
-        .tltitle  { font-size: 50px; }
+        .time_line {
+            width: 690px;
+        }
 
-        .tlbg{
+        .tltitle {
+            font-size: 50px;
+        }
+
+        .tlbg {
             padding-left: $tlbg_padding;
             padding-right: $tlbg_padding;
 
             width: 640px;
 
-            .line_contrainer{
-                .date_txt { font-size: 20px; }
+            .line_contrainer {
+                .date_txt {
+                    font-size: 20px;
+                }
 
-                .line{
+                .line {
                     height: 55px;
                     border-radius: 20px;
                     margin-top: 42px;
 
-                    .date_line { transform: translateY($dateline_offsetY); }
+                    .date_line {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+                    .date_line_sellecter {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    @include timeline_lines(5.9%, 3%, 5%, 2.9%, 4%, 9.3%, 
-                                        10.2%, 3.3%, 15.7%, 4%, 4.5%, 2.5%);
+                    @include timeline_lines(5.9%, 3%, 5%, 2.9%, 4%, 9.3%,
+                        10.2%, 3.3%, 15.7%, 4%, 4.5%, 2.5%);
                 }
             }
 
-            .Description{
+            .Description {
                 padding-left: $description_padding;
                 padding-right: $description_padding;
 
                 border-radius: 20px;
 
-                .DscTitle { font-size: 40px; }    
-    
-                .DscInfo { font-size: 12px; }
+                .DscTitle {
+                    font-size: 40px;
+                }
+
+                .DscInfo {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -233,51 +289,71 @@ $returntomenu_inhideX: -75px;
     $tlbg_padding: 10px;
     $description_padding: 8px;
     $dateline_offsetY: -7px;
-    .time_line_container{
+
+    .time_line_container {
         margin-top: 40px;
 
-        .time_line { width: 390px; }
-        
-        .tltitle  { font-size: 47px; }
+        .time_line {
+            width: 390px;
+        }
 
-        .tlbg{
+        .tltitle {
+            font-size: 47px;
+        }
+
+        .tlbg {
             padding-left: $tlbg_padding;
             padding-right: $tlbg_padding;
 
             width: 340px;
 
-            .line_contrainer{
-                .date_txt { font-size: 20px; }
+            .line_contrainer {
+                .date_txt {
+                    font-size: 20px;
+                }
 
-                .line{
+                .line {
                     height: 55px;
                     border-radius: 20px;
                     margin-top: 42px;
 
-                    .date_line { transform: translateY($dateline_offsetY); }
+                    .date_line {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    .date_line_sellecter { transform: translateY($dateline_offsetY); }
+                    .date_line_sellecter {
+                        transform: translateY($dateline_offsetY);
+                    }
 
-                    @include timeline_lines(5.8%, 1.5%, 1.5%, 2%, 4%, 5.7%, 
-                                        6%, 3.3%, 14.5%, 1.5%, 1.5%, 2%);
+                    @include timeline_lines(5.8%, 1.5%, 1.5%, 2%, 4%, 5.7%,
+                        6%, 3.3%, 14.5%, 1.5%, 1.5%, 2%);
                 }
             }
 
-            .Description{
+            .Description {
                 padding-left: $description_padding;
                 padding-right: $description_padding;
 
                 border-radius: 18px;
 
-                .DscTitle { font-size: 25px; }    
-    
-                .DscInfo { font-size: 9px; }
+                .DscTitle {
+                    font-size: 25px;
+                }
+
+                .DscInfo {
+                    font-size: 9px;
+                }
             }
         }
     }
 }
 
-#dls1:hover, #dls2:hover, #dls3:hover, #dls4:hover, #dls5:hover, #dls6:hover {
+#dls1:hover,
+#dls2:hover,
+#dls3:hover,
+#dls4:hover,
+#dls5:hover,
+#dls6:hover {
     cursor: pointer;
 }
 
@@ -285,99 +361,104 @@ body {
     background-image: url(../data/img/Art2.jpg);
     background-attachment: fixed;
     background-size: cover;
-    
+
     margin: 0;
 }
 
-.time_line_container{
+.time_line_container {
 
     display: block;
 
     width: 100%;
 
-    .time_line{
+    .time_line {
         @include automargin();
-    
-        .tltitle{
+
+        .tltitle {
             font-family: 'scr';
             text-align: center;
             font-weight: bold;
 
             line-height: 100%;
-        
+
             color: #FFFFFF;
-        
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
-                        1px 4px 6px rgba(124, 60, 0, 0.5), 
-                        0px 0px 18px #000000;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+                1px 4px 6px rgba(124, 60, 0, 0.5),
+                0px 0px 18px #000000;
         }
-    
-        .tlbg{
+
+        .tlbg {
             background: rgba(73, 73, 73, 0.85);
             border-radius: 34px;
-    
+
             @include automargin();
 
-            .line_contrainer{
+            .line_contrainer {
                 .date_txt {
                     font-family: 'scm';
-    
+
                     float: left;
 
                     width: 0;
 
                     line-height: 50%;
-    
+
                     color: #FFFFFF;
-    
+
                     writing-mode: vertical-lr;
                 }
 
                 #d1 {
                     margin-left: 6%;
                 }
+
                 #d2 {
                     margin-left: 17.6%;
                 }
-                #d3{
+
+                #d3 {
                     margin-left: 17.6%;
                 }
+
                 #d4 {
                     margin-left: 17.6%;
                 }
+
                 #d5 {
                     margin-left: 17.6%;
                 }
+
                 #d6 {
                     margin-left: 17.6%;
                 }
-    
+
                 .line {
                     width: 100%;
-    
+
                     @include automargin();
-    
+
                     background: #0B0B0B;
                     box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
-                    
+
 
                     .date_line {
                         width: 11px;
                         height: 125%;
-    
+
                         background: #1E1E1E;
                         border-radius: 6px;
-    
+
                         float: left;
                     }
-    
-                    .date_line_sellecter{
+
+                    .date_line_sellecter {
                         width: 16px;
                         height: 125%;
-    
+
                         background: #969696;
                         border-radius: 6px;
-    
+
                         float: left;
                     }
 
@@ -385,43 +466,49 @@ body {
                     #dls1:hover {
                         background: #8df542;
                     }
+
                     #dls2:hover {
                         background: #f55742;
                     }
+
                     #dls3:hover {
                         background: goldenrod;
                     }
+
                     #dls4:hover {
                         background: green;
                     }
+
                     #dls5:hover {
                         background: #db4f2c;
                     }
+
                     #dls6:hover {
                         background: #4f45ff;
                     }
+
                     //
                 }
             }
-    
+
             .Description {
                 width: 100% - 3.5775%;
                 height: auto;
-    
+
                 background: rgba(35, 35, 35, 0.75);
-    
-                .DscTitle{              
+
+                .DscTitle {
                     font-family: 'scl';
                     text-align: center;
-    
+
                     margin: 0;
-    
-                    color: #23D735;          
+
+                    color: #23D735;
                 }
-    
+
                 .DscInfo {
                     font-family: 'scl';
-                    
+
                     color: #FFFFFF;
                 }
             }

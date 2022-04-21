@@ -55,12 +55,30 @@
     margin-top: 8px;
     font-size: 36px;
   }
-  .selectbar .selectbarbg .sbbut1, .selectbar .selectbarbg .sbbut2, .selectbar .selectbarbg .sbbut3, .selectbar .selectbarbg .sbbut4 {
+  .selectbar .selectbarbg .sbbut1,
+  .selectbar .selectbarbg .sbbut2,
+  .selectbar .selectbarbg .sbbut3,
+  .selectbar .selectbarbg .sbbut4 {
     width: 100%;
     height: 55px;
     margin-top: auto;
   }
-  .selectbar .selectbarbg .sbbut1 .sbbut1t, .selectbar .selectbarbg .sbbut1 .sbbut2t, .selectbar .selectbarbg .sbbut1 .sbbut3t, .selectbar .selectbarbg .sbbut1 .sbbut4t, .selectbar .selectbarbg .sbbut2 .sbbut1t, .selectbar .selectbarbg .sbbut2 .sbbut2t, .selectbar .selectbarbg .sbbut2 .sbbut3t, .selectbar .selectbarbg .sbbut2 .sbbut4t, .selectbar .selectbarbg .sbbut3 .sbbut1t, .selectbar .selectbarbg .sbbut3 .sbbut2t, .selectbar .selectbarbg .sbbut3 .sbbut3t, .selectbar .selectbarbg .sbbut3 .sbbut4t, .selectbar .selectbarbg .sbbut4 .sbbut1t, .selectbar .selectbarbg .sbbut4 .sbbut2t, .selectbar .selectbarbg .sbbut4 .sbbut3t, .selectbar .selectbarbg .sbbut4 .sbbut4t {
+  .selectbar .selectbarbg .sbbut1 .sbbut1t,
+  .selectbar .selectbarbg .sbbut1 .sbbut2t,
+  .selectbar .selectbarbg .sbbut1 .sbbut3t,
+  .selectbar .selectbarbg .sbbut1 .sbbut4t,
+  .selectbar .selectbarbg .sbbut2 .sbbut1t,
+  .selectbar .selectbarbg .sbbut2 .sbbut2t,
+  .selectbar .selectbarbg .sbbut2 .sbbut3t,
+  .selectbar .selectbarbg .sbbut2 .sbbut4t,
+  .selectbar .selectbarbg .sbbut3 .sbbut1t,
+  .selectbar .selectbarbg .sbbut3 .sbbut2t,
+  .selectbar .selectbarbg .sbbut3 .sbbut3t,
+  .selectbar .selectbarbg .sbbut3 .sbbut4t,
+  .selectbar .selectbarbg .sbbut4 .sbbut1t,
+  .selectbar .selectbarbg .sbbut4 .sbbut2t,
+  .selectbar .selectbarbg .sbbut4 .sbbut3t,
+  .selectbar .selectbarbg .sbbut4 .sbbut4t {
     font-size: 20px;
     margin-top: 7px;
   }
@@ -107,12 +125,30 @@
     margin-top: 7px;
     font-size: 28px;
   }
-  .selectbar .selectbarbg .sbbut1, .selectbar .selectbarbg .sbbut2, .selectbar .selectbarbg .sbbut3, .selectbar .selectbarbg .sbbut4 {
+  .selectbar .selectbarbg .sbbut1,
+  .selectbar .selectbarbg .sbbut2,
+  .selectbar .selectbarbg .sbbut3,
+  .selectbar .selectbarbg .sbbut4 {
     width: 100%;
     height: 50px;
     margin-top: auto;
   }
-  .selectbar .selectbarbg .sbbut1 .sbbut1t, .selectbar .selectbarbg .sbbut1 .sbbut2t, .selectbar .selectbarbg .sbbut1 .sbbut3t, .selectbar .selectbarbg .sbbut1 .sbbut4t, .selectbar .selectbarbg .sbbut2 .sbbut1t, .selectbar .selectbarbg .sbbut2 .sbbut2t, .selectbar .selectbarbg .sbbut2 .sbbut3t, .selectbar .selectbarbg .sbbut2 .sbbut4t, .selectbar .selectbarbg .sbbut3 .sbbut1t, .selectbar .selectbarbg .sbbut3 .sbbut2t, .selectbar .selectbarbg .sbbut3 .sbbut3t, .selectbar .selectbarbg .sbbut3 .sbbut4t, .selectbar .selectbarbg .sbbut4 .sbbut1t, .selectbar .selectbarbg .sbbut4 .sbbut2t, .selectbar .selectbarbg .sbbut4 .sbbut3t, .selectbar .selectbarbg .sbbut4 .sbbut4t {
+  .selectbar .selectbarbg .sbbut1 .sbbut1t,
+  .selectbar .selectbarbg .sbbut1 .sbbut2t,
+  .selectbar .selectbarbg .sbbut1 .sbbut3t,
+  .selectbar .selectbarbg .sbbut1 .sbbut4t,
+  .selectbar .selectbarbg .sbbut2 .sbbut1t,
+  .selectbar .selectbarbg .sbbut2 .sbbut2t,
+  .selectbar .selectbarbg .sbbut2 .sbbut3t,
+  .selectbar .selectbarbg .sbbut2 .sbbut4t,
+  .selectbar .selectbarbg .sbbut3 .sbbut1t,
+  .selectbar .selectbarbg .sbbut3 .sbbut2t,
+  .selectbar .selectbarbg .sbbut3 .sbbut3t,
+  .selectbar .selectbarbg .sbbut3 .sbbut4t,
+  .selectbar .selectbarbg .sbbut4 .sbbut1t,
+  .selectbar .selectbarbg .sbbut4 .sbbut2t,
+  .selectbar .selectbarbg .sbbut4 .sbbut3t,
+  .selectbar .selectbarbg .sbbut4 .sbbut4t {
     font-size: 18px;
     margin-top: 6px;
   }
@@ -183,12 +219,30 @@
     margin-top: 7px;
     font-size: 14px;
   }
-  .selectbar .selectbarbg .sbbut1, .selectbar .selectbarbg .sbbut2, .selectbar .selectbarbg .sbbut3, .selectbar .selectbarbg .sbbut4 {
+  .selectbar .selectbarbg .sbbut1,
+  .selectbar .selectbarbg .sbbut2,
+  .selectbar .selectbarbg .sbbut3,
+  .selectbar .selectbarbg .sbbut4 {
     width: 100%;
     height: 30px;
     margin-top: auto;
   }
-  .selectbar .selectbarbg .sbbut1 .sbbut1t, .selectbar .selectbarbg .sbbut1 .sbbut2t, .selectbar .selectbarbg .sbbut1 .sbbut3t, .selectbar .selectbarbg .sbbut1 .sbbut4t, .selectbar .selectbarbg .sbbut2 .sbbut1t, .selectbar .selectbarbg .sbbut2 .sbbut2t, .selectbar .selectbarbg .sbbut2 .sbbut3t, .selectbar .selectbarbg .sbbut2 .sbbut4t, .selectbar .selectbarbg .sbbut3 .sbbut1t, .selectbar .selectbarbg .sbbut3 .sbbut2t, .selectbar .selectbarbg .sbbut3 .sbbut3t, .selectbar .selectbarbg .sbbut3 .sbbut4t, .selectbar .selectbarbg .sbbut4 .sbbut1t, .selectbar .selectbarbg .sbbut4 .sbbut2t, .selectbar .selectbarbg .sbbut4 .sbbut3t, .selectbar .selectbarbg .sbbut4 .sbbut4t {
+  .selectbar .selectbarbg .sbbut1 .sbbut1t,
+  .selectbar .selectbarbg .sbbut1 .sbbut2t,
+  .selectbar .selectbarbg .sbbut1 .sbbut3t,
+  .selectbar .selectbarbg .sbbut1 .sbbut4t,
+  .selectbar .selectbarbg .sbbut2 .sbbut1t,
+  .selectbar .selectbarbg .sbbut2 .sbbut2t,
+  .selectbar .selectbarbg .sbbut2 .sbbut3t,
+  .selectbar .selectbarbg .sbbut2 .sbbut4t,
+  .selectbar .selectbarbg .sbbut3 .sbbut1t,
+  .selectbar .selectbarbg .sbbut3 .sbbut2t,
+  .selectbar .selectbarbg .sbbut3 .sbbut3t,
+  .selectbar .selectbarbg .sbbut3 .sbbut4t,
+  .selectbar .selectbarbg .sbbut4 .sbbut1t,
+  .selectbar .selectbarbg .sbbut4 .sbbut2t,
+  .selectbar .selectbarbg .sbbut4 .sbbut3t,
+  .selectbar .selectbarbg .sbbut4 .sbbut4t {
     font-size: 12px;
     margin-top: 3px;
   }
@@ -260,13 +314,31 @@
     margin-top: 8px;
     font-size: 12px;
   }
-  .selectbar .selectbarbg .sbbut1, .selectbar .selectbarbg .sbbut2, .selectbar .selectbarbg .sbbut3, .selectbar .selectbarbg .sbbut4 {
+  .selectbar .selectbarbg .sbbut1,
+  .selectbar .selectbarbg .sbbut2,
+  .selectbar .selectbarbg .sbbut3,
+  .selectbar .selectbarbg .sbbut4 {
     width: 100%;
     height: 33px;
     margin-top: auto;
     border-radius: 12px !important;
   }
-  .selectbar .selectbarbg .sbbut1 .sbbut1t, .selectbar .selectbarbg .sbbut1 .sbbut2t, .selectbar .selectbarbg .sbbut1 .sbbut3t, .selectbar .selectbarbg .sbbut1 .sbbut4t, .selectbar .selectbarbg .sbbut2 .sbbut1t, .selectbar .selectbarbg .sbbut2 .sbbut2t, .selectbar .selectbarbg .sbbut2 .sbbut3t, .selectbar .selectbarbg .sbbut2 .sbbut4t, .selectbar .selectbarbg .sbbut3 .sbbut1t, .selectbar .selectbarbg .sbbut3 .sbbut2t, .selectbar .selectbarbg .sbbut3 .sbbut3t, .selectbar .selectbarbg .sbbut3 .sbbut4t, .selectbar .selectbarbg .sbbut4 .sbbut1t, .selectbar .selectbarbg .sbbut4 .sbbut2t, .selectbar .selectbarbg .sbbut4 .sbbut3t, .selectbar .selectbarbg .sbbut4 .sbbut4t {
+  .selectbar .selectbarbg .sbbut1 .sbbut1t,
+  .selectbar .selectbarbg .sbbut1 .sbbut2t,
+  .selectbar .selectbarbg .sbbut1 .sbbut3t,
+  .selectbar .selectbarbg .sbbut1 .sbbut4t,
+  .selectbar .selectbarbg .sbbut2 .sbbut1t,
+  .selectbar .selectbarbg .sbbut2 .sbbut2t,
+  .selectbar .selectbarbg .sbbut2 .sbbut3t,
+  .selectbar .selectbarbg .sbbut2 .sbbut4t,
+  .selectbar .selectbarbg .sbbut3 .sbbut1t,
+  .selectbar .selectbarbg .sbbut3 .sbbut2t,
+  .selectbar .selectbarbg .sbbut3 .sbbut3t,
+  .selectbar .selectbarbg .sbbut3 .sbbut4t,
+  .selectbar .selectbarbg .sbbut4 .sbbut1t,
+  .selectbar .selectbarbg .sbbut4 .sbbut2t,
+  .selectbar .selectbarbg .sbbut4 .sbbut3t,
+  .selectbar .selectbarbg .sbbut4 .sbbut4t {
     font-size: 9px;
     margin-top: 7px;
   }
@@ -276,7 +348,11 @@
   }
 }
 
-.sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
+.sbbut0:hover,
+.sbbut1:hover,
+.sbbut2:hover,
+.sbbut3:hover,
+.sbbut4:hover,
 .RTM_bg:hover {
   cursor: pointer;
 }
@@ -380,13 +456,31 @@ body {
   text-shadow: 1px 0px 3px #7C3400;
 }
 
-.selectbar .selectbarbg .sbbut1, .selectbar .selectbarbg .sbbut2, .selectbar .selectbarbg .sbbut3, .selectbar .selectbarbg .sbbut4 {
+.selectbar .selectbarbg .sbbut1,
+.selectbar .selectbarbg .sbbut2,
+.selectbar .selectbarbg .sbbut3,
+.selectbar .selectbarbg .sbbut4 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 23px;
 }
 
-.selectbar .selectbarbg .sbbut1 .sbbut1t, .selectbar .selectbarbg .sbbut1 .sbbut2t, .selectbar .selectbarbg .sbbut1 .sbbut3t, .selectbar .selectbarbg .sbbut1 .sbbut4t, .selectbar .selectbarbg .sbbut2 .sbbut1t, .selectbar .selectbarbg .sbbut2 .sbbut2t, .selectbar .selectbarbg .sbbut2 .sbbut3t, .selectbar .selectbarbg .sbbut2 .sbbut4t, .selectbar .selectbarbg .sbbut3 .sbbut1t, .selectbar .selectbarbg .sbbut3 .sbbut2t, .selectbar .selectbarbg .sbbut3 .sbbut3t, .selectbar .selectbarbg .sbbut3 .sbbut4t, .selectbar .selectbarbg .sbbut4 .sbbut1t, .selectbar .selectbarbg .sbbut4 .sbbut2t, .selectbar .selectbarbg .sbbut4 .sbbut3t, .selectbar .selectbarbg .sbbut4 .sbbut4t {
+.selectbar .selectbarbg .sbbut1 .sbbut1t,
+.selectbar .selectbarbg .sbbut1 .sbbut2t,
+.selectbar .selectbarbg .sbbut1 .sbbut3t,
+.selectbar .selectbarbg .sbbut1 .sbbut4t,
+.selectbar .selectbarbg .sbbut2 .sbbut1t,
+.selectbar .selectbarbg .sbbut2 .sbbut2t,
+.selectbar .selectbarbg .sbbut2 .sbbut3t,
+.selectbar .selectbarbg .sbbut2 .sbbut4t,
+.selectbar .selectbarbg .sbbut3 .sbbut1t,
+.selectbar .selectbarbg .sbbut3 .sbbut2t,
+.selectbar .selectbarbg .sbbut3 .sbbut3t,
+.selectbar .selectbarbg .sbbut3 .sbbut4t,
+.selectbar .selectbarbg .sbbut4 .sbbut1t,
+.selectbar .selectbarbg .sbbut4 .sbbut2t,
+.selectbar .selectbarbg .sbbut4 .sbbut3t,
+.selectbar .selectbarbg .sbbut4 .sbbut4t {
   font-family: 'scm';
   font-style: normal;
   line-height: 100%;

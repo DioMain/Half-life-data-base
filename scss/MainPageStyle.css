@@ -34,17 +34,23 @@
     grid-gap: 30px;
     padding: 30px;
   }
-  .selector .but0, .selector .but1, .selector .but2 {
+  .selector .but0,
+  .selector .but1,
+  .selector .but2 {
     width: 295px;
     height: 68px;
     border-radius: 37px;
   }
-  .selector .logo0, .selector .logo1, .selector .logo2 {
+  .selector .logo0,
+  .selector .logo1,
+  .selector .logo2 {
     margin-top: 150px;
     width: 300px;
     height: 300px;
   }
-  .selector .txt0, .selector .txt1, .selector .txt2 {
+  .selector .txt0,
+  .selector .txt1,
+  .selector .txt2 {
     padding-top: 18px;
     font-size: 24px;
   }
@@ -71,17 +77,23 @@
     grid-gap: 25px;
     padding: 25px;
   }
-  .selector .but0, .selector .but1, .selector .but2 {
+  .selector .but0,
+  .selector .but1,
+  .selector .but2 {
     width: 275px;
     height: 63px;
     border-radius: 37px;
   }
-  .selector .logo0, .selector .logo1, .selector .logo2 {
+  .selector .logo0,
+  .selector .logo1,
+  .selector .logo2 {
     margin-top: 115px;
     width: 250px;
     height: 250px;
   }
-  .selector .txt0, .selector .txt1, .selector .txt2 {
+  .selector .txt0,
+  .selector .txt1,
+  .selector .txt2 {
     padding-top: 16px;
     font-size: 22px;
   }
@@ -108,17 +120,23 @@
     grid-gap: 17px;
     padding: 17px;
   }
-  .selector .but0, .selector .but1, .selector .but2 {
+  .selector .but0,
+  .selector .but1,
+  .selector .but2 {
     width: 200px;
     height: 46px;
     border-radius: 30px;
   }
-  .selector .logo0, .selector .logo1, .selector .logo2 {
+  .selector .logo0,
+  .selector .logo1,
+  .selector .logo2 {
     margin-top: 80px;
     width: 175px;
     height: 175px;
   }
-  .selector .txt0, .selector .txt1, .selector .txt2 {
+  .selector .txt0,
+  .selector .txt1,
+  .selector .txt2 {
     padding-top: 8px;
     font-size: 16px;
   }
@@ -145,17 +163,23 @@
     grid-gap: 12px;
     padding: 12px;
   }
-  .selector .but0, .selector .but1, .selector .but2 {
+  .selector .but0,
+  .selector .but1,
+  .selector .but2 {
     width: 150px;
     height: 34px;
     border-radius: 15px;
   }
-  .selector .logo0, .selector .logo1, .selector .logo2 {
+  .selector .logo0,
+  .selector .logo1,
+  .selector .logo2 {
     margin-top: 75px;
     width: 125px;
     height: 125px;
   }
-  .selector .txt0, .selector .txt1, .selector .txt2 {
+  .selector .txt0,
+  .selector .txt1,
+  .selector .txt2 {
     padding-top: 3px;
     font-size: 12px;
   }
@@ -182,17 +206,23 @@
     grid-gap: 20px;
     padding: 20px;
   }
-  .selector .but0, .selector .but1, .selector .but2 {
+  .selector .but0,
+  .selector .but1,
+  .selector .but2 {
     width: 200px;
     height: 46px;
     border-radius: 30px;
   }
-  .selector .logo0, .selector .logo1, .selector .logo2 {
+  .selector .logo0,
+  .selector .logo1,
+  .selector .logo2 {
     margin-top: 82px;
     width: 160px;
     height: 160px;
   }
-  .selector .txt0, .selector .txt1, .selector .txt2 {
+  .selector .txt0,
+  .selector .txt1,
+  .selector .txt2 {
     padding-top: 7px;
     font-size: 15px;
   }
@@ -248,7 +278,9 @@ body {
   margin-right: auto;
 }
 
-.selector .txt0, .selector .txt1, .selector .txt2 {
+.selector .txt0,
+.selector .txt1,
+.selector .txt2 {
   font-family: 'Source-medium';
   font-style: normal;
   line-height: 30px;
@@ -256,12 +288,22 @@ body {
   color: #000000;
 }
 
-.selector .sel0, .selector .sel1, .selector .sel2 {
+.selector .sel0,
+.selector .sel1,
+.selector .sel2 {
   background: rgba(84, 84, 84, 0.75);
   border-radius: 45px;
 }
 
-.selector .sel0 .logo0, .selector .sel0 .logo1, .selector .sel0 .logo2, .selector .sel1 .logo0, .selector .sel1 .logo1, .selector .sel1 .logo2, .selector .sel2 .logo0, .selector .sel2 .logo1, .selector .sel2 .logo2 {
+.selector .sel0 .logo0,
+.selector .sel0 .logo1,
+.selector .sel0 .logo2,
+.selector .sel1 .logo0,
+.selector .sel1 .logo1,
+.selector .sel1 .logo2,
+.selector .sel2 .logo0,
+.selector .sel2 .logo1,
+.selector .sel2 .logo2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -273,7 +315,15 @@ body {
           animation-duration: 0.15s;
 }
 
-.selector .sel0 .but0, .selector .sel0 .but1, .selector .sel0 .but2, .selector .sel1 .but0, .selector .sel1 .but1, .selector .sel1 .but2, .selector .sel2 .but0, .selector .sel2 .but1, .selector .sel2 .but2 {
+.selector .sel0 .but0,
+.selector .sel0 .but1,
+.selector .sel0 .but2,
+.selector .sel1 .but0,
+.selector .sel1 .but1,
+.selector .sel1 .but2,
+.selector .sel2 .but0,
+.selector .sel2 .but1,
+.selector .sel2 .but2 {
   background: #C2C2C2;
   margin-left: auto;
   margin-right: auto;
@@ -288,12 +338,22 @@ body {
           animation-duration: 0.15s;
 }
 
-.selector .but0:hover, .selector .but1:hover, .selector .but2:hover {
+.selector .but0:hover,
+.selector .but1:hover,
+.selector .but2:hover {
   background: #8f8f8f;
   cursor: pointer;
 }
 
-.selector .sel0:hover .logo0, .selector .sel0:hover .logo1, .selector .sel0:hover .logo2, .selector .sel1:hover .logo0, .selector .sel1:hover .logo1, .selector .sel1:hover .logo2, .selector .sel2:hover .logo0, .selector .sel2:hover .logo1, .selector .sel2:hover .logo2 {
+.selector .sel0:hover .logo0,
+.selector .sel0:hover .logo1,
+.selector .sel0:hover .logo2,
+.selector .sel1:hover .logo0,
+.selector .sel1:hover .logo1,
+.selector .sel1:hover .logo2,
+.selector .sel2:hover .logo0,
+.selector .sel2:hover .logo1,
+.selector .sel2:hover .logo2 {
   -webkit-transform: translateY(-75px);
           transform: translateY(-75px);
   -webkit-animation-name: logoup;
@@ -302,7 +362,15 @@ body {
           animation-duration: 0.15s;
 }
 
-.selector .sel0:hover .but0, .selector .sel0:hover .but1, .selector .sel0:hover .but2, .selector .sel1:hover .but0, .selector .sel1:hover .but1, .selector .sel1:hover .but2, .selector .sel2:hover .but0, .selector .sel2:hover .but1, .selector .sel2:hover .but2 {
+.selector .sel0:hover .but0,
+.selector .sel0:hover .but1,
+.selector .sel0:hover .but2,
+.selector .sel1:hover .but0,
+.selector .sel1:hover .but1,
+.selector .sel1:hover .but2,
+.selector .sel2:hover .but0,
+.selector .sel2:hover .but1,
+.selector .sel2:hover .but2 {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   -webkit-animation-name: butup;

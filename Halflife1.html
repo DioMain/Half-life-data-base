@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="scss/Halflife1Style.css">
     <link rel="stylesheet" href="scss/Interface.css">
+    <link rel="stylesheet" href="scss/GameArticleStyle.css">
+    <link rel="stylesheet" href="scss/footer.css">
     <link rel="shortcut icon" href="data/svg/h1Logo.svg" type="image/x-icon">
 
     <title>Half-life 1</title>
 </head>
+
 <body>
-<!--Интерфэйс начало-->
+
+    <!--Контейнер статьи-->
+    <main class="article_container">
+        <h1 class="article_title" style="color: #FFBE8F;">Half-life</h1>
+
+        <section class="article_bg">
+            <h2 class="topic_title">Описание</h2>
+
+            <article class="topic_type1">
+                <p>
+                    Half-Life — научно-фантастический шутер от первого лица,
+                    разработанный и изданный компанией Valve.
+                    Игрок берет на себя роль ученого Гордона Фримена, который изо всех сил
+                    пытается сбежать из подземного исследовательского центра после того, как
+                    неудачный эксперимент вызвал массовое вторжение инопланетян через
+                    межпространственный разлом. Первоначально разработанная для Microsoft Windows,
+                    а затем перенесенная на другие платформы, такие как PS2 и OS X, игра использует
+                    значительно модифицированную версию движка Quake под названием GoldSrc.
+                    <br>
+                    &nbsp;&nbsp;Игра получила лучшие оценки от всех критиков того времени. Это случилость
+                    потому, что игра делала упор не только на гейм плей, так и на сюжет,
+                    а на тот момент сюжету в шутерах не уделали внимания и весь сюжет помещали просто в текстовые файлы.
+                    Это было из-за идей Джона Кармока:
+                    <br>
+                    &nbsp;&nbsp;<q><abbr title="Джон Кармок">Сюжет в игре — как сюжет в порно фильме.
+                            Он должен быть, но совершенно не важен</abbr></q>
+                    <br>
+                    &nbsp;&nbsp;Half-life в свою очередь раздвинул эти рамки.
+                </p>
+
+                <figure>
+                    <img src="data/img/h1/Art0.jpg">
+                    <figcaption>Постер half-life 1</figcaption>
+                </figure>
+            </article>
+
+            <h2 class="topic_title">some topic...</h2>
+
+            <article class="topic_type2">
+                <h3></h3>
+            </article>
+        </section>
+    </main>
+
+    <!--Интерфэйс начало-->
     <nav class="ReturnToMenu">
         <div class="RTM_bg" onmousedown="">
             <div class="RTM_txt">Main menu</div>
@@ -22,8 +70,7 @@
             <div class="sbbut0" onmousedown="">
                 <div class="sbbut0t">time line</div>
             </div>
-            <div class="sbbut1"
-                onmousedown="">
+            <div class="sbbut1" onmousedown="">
                 <div class="sbbut1t">Half-life:<br> decay</div>
             </div>
             <div class="sbbut2" onmousedown="">
@@ -37,8 +84,29 @@
             </div>
         </div>
     </nav>
-<!--Интерфэйс конец-->
+    <!--Интерфэйс конец-->
+
+    <!--Подвальнья информация-->
+    <footer class="footer_info" style="margin-top: 300px">
+        <div class="github">
+            <a href="https://github.com/DioMain/Half-life-data-base">
+                <img src="data/img/interface/GitHub W.png">
+            </a>
+        </div>
+
+        <div class="vk">
+            <a href="https://vk.com/id305474816">
+                <img src="data/img/interface/VK W.png">
+            </a>
+        </div>
+
+        <svg version="1.1" class="valve_logo" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="data/svg/Valve_logo.svg" height="48" stroke="red" stroke-width="5px">
+        </svg>
+    </footer>
 
     <script src="js/Half-life1.js"></script>
 </body>
+
 </html>

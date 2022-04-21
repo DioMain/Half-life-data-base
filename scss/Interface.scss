@@ -51,20 +51,20 @@ $returntomenu_inhideX: -75px;
 }
 
 //(def) = (141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px)
-@mixin return_to_menu($width, $height, $left, $top, $borderr, 
-                    $margint, $marginl, $fontsize) {
-    .ReturnToMenu{
+@mixin return_to_menu($width, $height, $left, $top, $borderr,
+    $margint, $marginl, $fontsize) {
+    .ReturnToMenu {
         width: $width;
         height: $height;
 
         left: $left;
         top: $top;
 
-        .RTM_bg{
+        .RTM_bg {
             border-radius: $borderr;
         }
 
-        .RTM_txt{
+        .RTM_txt {
             margin-top: $margint;
             margin-left: $marginl;
 
@@ -75,11 +75,11 @@ $returntomenu_inhideX: -75px;
 
 //(def) = (116px, -65px, 20px, 37px)
 @mixin select_bar_basic($height, $top, $grid_gap_padding, $borderr) {
-    .selectbar{
+    .selectbar {
         height: $height;
         top: $top;
 
-        .selectbarbg{
+        .selectbarbg {
             grid-gap: $grid_gap_padding;
             padding: $grid_gap_padding;
 
@@ -89,60 +89,60 @@ $returntomenu_inhideX: -75px;
 }
 
 @mixin low_animation {
-    .ReturnToMenu{
-        .RTM_bg{                  
-            transform: translateX($returntomenu_inhideX + 35px) !important;  
+    .ReturnToMenu {
+        .RTM_bg {
+            transform: translateX($returntomenu_inhideX + 35px) !important;
             animation-name: return_out_low !important;
         }
     }
 
-    .ReturnToMenu:hover{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
+    .ReturnToMenu:hover {
+        .RTM_bg {
+            transform: translateX(0px) !important;
             animation-name: return_in_low !important;
         }
     }
 
-    .selectbar{  
-        .selectbarbg{   
-            animation-name: sellector_out_low !important;   
+    .selectbar {
+        .selectbarbg {
+            animation-name: sellector_out_low !important;
             transform: translateY($sellector_inhideY + 35px) !important;
         }
     }
 
-    .selectbar:hover{  
-        .selectbarbg{
-            animation-name: sellector_in_low !important;   
+    .selectbar:hover {
+        .selectbarbg {
+            animation-name: sellector_in_low !important;
             transform: translateY(0px) !important;
         }
     }
 }
 
-@mixin  disable_animation {
-    .ReturnToMenu{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
+@mixin disable_animation {
+    .ReturnToMenu {
+        .RTM_bg {
+            transform: translateX(0px) !important;
             animation-name: none !important;
         }
     }
 
-    .ReturnToMenu:hover{
-        .RTM_bg{                  
-            transform: translateX(0px) !important;  
+    .ReturnToMenu:hover {
+        .RTM_bg {
+            transform: translateX(0px) !important;
             animation-name: none !important;
         }
     }
 
-    .selectbar{  
-        .selectbarbg{   
-            animation-name: none !important;   
+    .selectbar {
+        .selectbarbg {
+            animation-name: none !important;
             transform: translateY(0px) !important;
         }
     }
 
-    .selectbar:hover{  
-        .selectbarbg{
-            animation-name: none !important;   
+    .selectbar:hover {
+        .selectbarbg {
+            animation-name: none !important;
             transform: translateY(0px) !important;
         }
     }
@@ -155,33 +155,40 @@ $returntomenu_inhideX: -75px;
     @include select_bar_basic(116px, -65px, 20px, 37px);
 
     $button_height: 55px;
-    .selectbar{
-        .selectbarbg{
+
+    .selectbar {
+        .selectbarbg {
             grid-template-columns: auto auto auto auto auto;
 
-            .sbbut0{
+            .sbbut0 {
                 @include _sbbutscale(100%, $button_height, auto);
 
-                .sbbut0t{
+                .sbbut0t {
                     margin-top: 8px;
 
                     font-size: 36px;
                 }
             }
 
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
                 @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
                     font-size: 20px;
                     margin-top: 7px;
                 }
             }
 
-            .sbbut4{
-                .sbbut4t{
+            .sbbut4 {
+                .sbbut4t {
                     margin-top: 14px;
-    
+
                     font-size: 25px !important;
                 }
             }
@@ -196,32 +203,39 @@ $returntomenu_inhideX: -75px;
     @include select_bar_basic(100px, -50px, 15px, 25px);
 
     $button_height: 50px;
-    .selectbar{
-        .selectbarbg{
+
+    .selectbar {
+        .selectbarbg {
             grid-template-columns: auto auto auto auto auto;
 
-            .sbbut0{
+            .sbbut0 {
                 @include _sbbutscale(100%, $button_height, auto);
 
-                .sbbut0t{
+                .sbbut0t {
                     margin-top: 7px;
                     font-size: 28px;
                 }
             }
 
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
                 @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
                     font-size: 18px;
                     margin-top: 6px;
                 }
             }
 
-            .sbbut4{
-                .sbbut4t{
+            .sbbut4 {
+                .sbbut4t {
                     font-size: 25px !important;
-                    margin-top: 12px; 
+                    margin-top: 12px;
                 }
             }
         }
@@ -237,32 +251,39 @@ $returntomenu_inhideX: -75px;
     @include low_animation();
 
     $button_height: 30px;
-    .selectbar{
-        .selectbarbg{
+
+    .selectbar {
+        .selectbarbg {
             grid-template-columns: auto auto auto auto auto;
 
-            .sbbut0{
+            .sbbut0 {
                 @include _sbbutscale(100%, $button_height, auto);
 
-                .sbbut0t{
+                .sbbut0t {
                     margin-top: 7px;
                     font-size: 14px;
                 }
             }
 
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
                 @include _sbbutscale(100%, $button_height, auto);
-                
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
                     font-size: 12px;
                     margin-top: 3px;
                 }
             }
 
-            .sbbut4{
-                .sbbut4t{
+            .sbbut4 {
+                .sbbut4t {
                     font-size: 14px !important;
-                    margin-top: 8px; 
+                    margin-top: 8px;
                 }
             }
         }
@@ -278,43 +299,54 @@ $returntomenu_inhideX: -75px;
     @include disable_animation();
 
     $button_height: 33px;
-    .selectbar{
-        .selectbarbg{
+
+    .selectbar {
+        .selectbarbg {
             grid-template-columns: auto auto auto auto auto;
 
-            .sbbut0{
+            .sbbut0 {
                 @include _sbbutscale(100%, $button_height, auto);
 
                 border-radius: 12px !important;
 
-                .sbbut0t{
+                .sbbut0t {
                     margin-top: 8px;
                     font-size: 12px;
                 }
             }
 
-            .sbbut1, .sbbut2, .sbbut3, .sbbut4{   
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
                 @include _sbbutscale(100%, $button_height, auto);
-                
+
                 border-radius: 12px !important;
 
-                .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
                     font-size: 9px;
                     margin-top: 7px;
                 }
             }
 
-            .sbbut4{
-                .sbbut4t{
+            .sbbut4 {
+                .sbbut4t {
                     font-size: 10px !important;
-                    margin-top: 11px; 
+                    margin-top: 11px;
                 }
             }
         }
     }
 }
 
-.sbbut0:hover, .sbbut1:hover, .sbbut2:hover, .sbbut3:hover, .sbbut4:hover,
+.sbbut0:hover,
+.sbbut1:hover,
+.sbbut2:hover,
+.sbbut3:hover,
+.sbbut4:hover,
 .RTM_bg:hover {
     cursor: pointer;
 }
@@ -323,44 +355,44 @@ body {
     background-image: url(../data/img/Art3.jpg);
     background-attachment: fixed;
     background-size: cover;
-    
+
     margin: 0;
 }
 
-.ReturnToMenu{
+.ReturnToMenu {
     position: fixed;
 
-    .RTM_bg{       
+    .RTM_bg {
         width: inherit;
         height: inherit;
-    
+
         background: rgba(138, 138, 138, 0.75);
         border: 2px solid #000000;
         box-sizing: border-box;
-        
+
         transform: translateX($returntomenu_inhideX);
 
         animation-name: return_out;
         animation-duration: $returntomenu_anim_dur;
 
-        .RTM_txt{       
+        .RTM_txt {
             font-family: 'scr';
             font-style: normal;
-        
+
             font-weight: bolder;
             line-height: 100%;
-        
+
             text-align: center;
-        
+
             letter-spacing: 0.1em;
-        
+
             color: #121212;
         }
     }
 }
 
 .ReturnToMenu:hover {
-    .RTM_bg{
+    .RTM_bg {
         transform: translateX(0px);
 
         animation-name: return_in;
@@ -369,7 +401,7 @@ body {
 }
 
 .selectbar:hover {
-    .selectbarbg{
+    .selectbarbg {
         transform: translateY(0px);
 
         animation-name: sellector_in;
@@ -377,12 +409,12 @@ body {
     }
 }
 
-.selectbar{
+.selectbar {
     position: fixed;
-    
+
     width: 100%;
 
-    .selectbarbg{
+    .selectbarbg {
         width: 75%;
 
         @include automargin();
@@ -400,37 +432,43 @@ body {
 
         transform: translateY($sellector_inhideY);
 
-        .sbbut0{
-    
+        .sbbut0 {
+
             background: #C5BFB2;
 
             @include automargin();
             border-radius: $sbbuttonborder;
-            
-            .sbbut0t{
+
+            .sbbut0t {
                 font-family: 'scs';
                 font-style: normal;
 
                 line-height: 100%;
-        
+
                 align-items: center;
                 text-align: center;
                 text-decoration-line: underline;
-        
+
                 color: #000000;
-        
+
                 text-shadow: 1px 0px 3px #7C3400;
             }
-            
-        }     
-    
-        .sbbut1, .sbbut2, .sbbut3, .sbbut4{
-    
+
+        }
+
+        .sbbut1,
+        .sbbut2,
+        .sbbut3,
+        .sbbut4 {
+
             @include automargin();
-         
+
             border-radius: $sbbuttonborder;
-            
-            .sbbut1t, .sbbut2t, .sbbut3t, .sbbut4t{
+
+            .sbbut1t,
+            .sbbut2t,
+            .sbbut3t,
+            .sbbut4t {
                 font-family: 'scm';
                 font-style: normal;
 
@@ -441,32 +479,39 @@ body {
             }
         }
 
-        .sbbut1{
+        .sbbut1 {
             background: #FF5353;
         }
-        .sbbut2{
+
+        .sbbut2 {
             background: #7489D5;
         }
-        .sbbut3{
+
+        .sbbut3 {
             background: #70AB55;
         }
-        .sbbut4{
+
+        .sbbut4 {
             background: #FFB257;
         }
 
-        .sbbut0:hover{
+        .sbbut0:hover {
             box-shadow: 0 0 15px 2px #C5BFB2;
         }
-        .sbbut1:hover{
+
+        .sbbut1:hover {
             box-shadow: 0 0 12px 2px #FF5353;
         }
-        .sbbut2:hover{
+
+        .sbbut2:hover {
             box-shadow: 0 0 12px 2px #7489D5;
         }
-        .sbbut3:hover{
+
+        .sbbut3:hover {
             box-shadow: 0 0 12px 2px #70AB55;
         }
-        .sbbut4:hover{
+
+        .sbbut4:hover {
             box-shadow: 0 0 12px 2px #FFB257;
         }
     }
@@ -502,7 +547,7 @@ body {
     }
 }
 
-@keyframes sellector_in_low{
+@keyframes sellector_in_low {
     0% {
         transform: translateY($sellector_inhideY + 35px);
     }

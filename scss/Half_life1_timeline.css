@@ -338,7 +338,12 @@
   }
 }
 
-#dls1:hover, #dls2:hover, #dls3:hover, #dls4:hover, #dls5:hover, #dls6:hover {
+#dls1:hover,
+#dls2:hover,
+#dls3:hover,
+#dls4:hover,
+#dls5:hover,
+#dls6:hover {
   cursor: pointer;
 }
 

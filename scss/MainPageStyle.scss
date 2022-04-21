@@ -2,8 +2,8 @@ $anim_dur: .15s;
 
 @font-face {
     font-family: "Source-light";
-    src: url("../data/fonts/sourcecodepro/Sourcecodeprolight.ttf") format("ttf"), 
-        url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff") format("woff"), 
+    src: url("../data/fonts/sourcecodepro/Sourcecodeprolight.ttf") format("ttf"),
+        url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff") format("woff"),
         url("../data/fonts/sourcecodepro/Sourcecodeprolight.woff2") format("woff2");
 }
 
@@ -21,7 +21,7 @@ $anim_dur: .15s;
 
 // font-size, padding-top, 
 @mixin sellector_button_txt($f_s, $p_t) {
-    padding-top: $p_t; 
+    padding-top: $p_t;
     font-size: $f_s;
 }
 
@@ -44,176 +44,206 @@ $anim_dur: .15s;
 // height, font-size
 @mixin Main_title($th, $f_s) {
 
-    .title{
+    .title {
         height: $th;
     }
-    
-    .title_txt0{
+
+    .title_txt0 {
         font-size: $f_s;
-        
+
     }
 
-    .title_txt1{
+    .title_txt1 {
         font-size: $f_s;
     }
 }
 
-@media screen and (min-width: 1820px){
+@media screen and (min-width: 1820px) {
 
     @include Main_title(240px, 96px);
 
-    .selector{
+    .selector {
 
         grid-template-columns: auto auto auto;
         grid-template-rows: auto !important;
 
         width: 1500px;
         height: 550px;
-    
+
         margin-top: 40px;
-        
+
         grid-gap: 30px;
         padding: 30px;
 
-        .but0, .but1, .but2{
+        .but0,
+        .but1,
+        .but2 {
             @include sellector_button(295px, 68px, 37px)
         }
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
             @include sellector_logo(150px, 300px);
         }
 
-        .txt0, .txt1, .txt2{
+        .txt0,
+        .txt1,
+        .txt2 {
             @include sellector_button_txt(24px, 18px);
         }
     }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 1819px){
+@media screen and (min-width: 1500px) and (max-width: 1819px) {
 
     @include Main_title(200px, 80px);
 
-    .selector{
+    .selector {
 
         grid-template-columns: auto auto auto;
         grid-template-rows: auto !important;
 
         width: 1300px;
         height: 478px;
-    
+
         margin-top: 40px;
-        
+
         grid-gap: 25px;
         padding: 25px;
 
-        .but0, .but1, .but2{
+        .but0,
+        .but1,
+        .but2 {
             @include sellector_button(275px, 63px, 37px)
         }
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
             @include sellector_logo(115px, 250px);
         }
 
-        .txt0, .txt1, .txt2{
+        .txt0,
+        .txt1,
+        .txt2 {
             @include sellector_button_txt(22px, 16px);
         }
     }
 }
 
-@media screen and (min-width: 1180px) and (max-width: 1499px){
+@media screen and (min-width: 1180px) and (max-width: 1499px) {
 
     @include Main_title(150px, 60px);
 
-    .selector{
-        
+    .selector {
+
         grid-template-columns: auto auto auto;
         grid-template-rows: auto !important;
 
         width: 1000px;
         height: 368px;
-    
+
         margin-top: 40px;
-        
+
         grid-gap: 17px;
         padding: 17px;
 
-        .but0, .but1, .but2{
+        .but0,
+        .but1,
+        .but2 {
             @include sellector_button(200px, 46px, 30px)
         }
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
             @include sellector_logo(80px, 175px);
         }
 
-        .txt0, .txt1, .txt2{
+        .txt0,
+        .txt1,
+        .txt2 {
             @include sellector_button_txt(16px, 8px);
         }
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1179px){
+@media screen and (min-width: 769px) and (max-width: 1179px) {
 
     @include Main_title(150px, 60px);
 
-    .selector{
+    .selector {
 
         grid-template-columns: auto auto auto;
         grid-template-rows: auto !important;
 
         width: 725px;
         height: 266px;
-    
+
         margin-top: 20px;
-        
+
         grid-gap: 12px;
         padding: 12px;
 
-        .but0, .but1, .but2{
+        .but0,
+        .but1,
+        .but2 {
             @include sellector_button(150px, 34px, 15px)
         }
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
             @include sellector_logo(75px, 125px);
         }
 
-        .txt0, .txt1, .txt2{
+        .txt0,
+        .txt1,
+        .txt2 {
             @include sellector_button_txt(12px, 3px);
         }
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     @include Main_title(75px, 28px);
 
-    .selector{
+    .selector {
 
         grid-template-rows: auto auto auto;
         grid-template-columns: auto !important;
 
         width: 280px;
         height: 1000px;
-    
+
         margin-top: 50px;
-        
+
         grid-gap: 20px;
         padding: 20px;
 
-        .but0, .but1, .but2{
+        .but0,
+        .but1,
+        .but2 {
             @include sellector_button(200px, 46px, 30px)
         }
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
             @include sellector_logo(82px, 160px);
         }
 
-        .txt0, .txt1, .txt2{
+        .txt0,
+        .txt1,
+        .txt2 {
             @include sellector_button_txt(15px, 7px);
         }
     }
 }
 
-body{
+body {
     background-attachment: fixed;
     background-image: url("../data/img/BGI.jpg");
     background-size: cover;
@@ -221,7 +251,7 @@ body{
     margin: 0;
 }
 
-.title{
+.title {
     width: auto;
 
     animation-name: titleon;
@@ -230,30 +260,30 @@ body{
     background: rgba(0, 0, 0, 0.06);
     box-shadow: 0px 13px 42px rgba(0, 0, 0, 0.25);
 
-    .title_txt0{
+    .title_txt0 {
         font-family: 'HL1';
         font-style: normal;
         text-align: center;
-    
+
         color: #FF9900;
-    
+
         line-height: 145%;
 
         text-shadow: 7px 8px 21px rgba(255, 184, 0, 0.25);
     }
-    
-    .title_txt1{
+
+    .title_txt1 {
         font-family: 'Source-light';
         font-style: normal;
         text-align: center;
-        
+
         line-height: 75%;
 
         color: #FFFFFF;
     }
 }
 
-.selector{
+.selector {
     display: grid;
 
     animation-name: selectoron;
@@ -266,102 +296,159 @@ body{
     margin-left: auto;
     margin-right: auto;
 
-    .txt0, .txt1, .txt2{
+    .txt0,
+    .txt1,
+    .txt2 {
         font-family: 'Source-medium';
         font-style: normal;
 
         line-height: 30px;
         text-align: center;
-    
+
         color: #000000;
     }
 
-    .sel0, .sel1, .sel2{
+    .sel0,
+    .sel1,
+    .sel2 {
 
         background: rgba(84, 84, 84, 0.75);
         border-radius: 45px;
 
-        .logo0, .logo1, .logo2{
+        .logo0,
+        .logo1,
+        .logo2 {
 
             display: block;
-        
+
             margin-left: auto;
             margin-right: auto;
-    
+
             transform: translateY(0px);
-    
+
             animation-name: logodown;
             animation-duration: $anim_dur;
         }
-    
-        .but0, .but1, .but2{
+
+        .but0,
+        .but1,
+        .but2 {
             background: #C2C2C2;
 
             margin-left: auto;
             margin-right: auto;
-            
+
             box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.25);
-            
+
             transform: translateY(0);
             opacity: 0%;
-    
+
             animation-name: butdown;
             animation-duration: $anim_dur;
         }
     }
-    
-    .but0:hover, .but1:hover, .but2:hover{
+
+    .but0:hover,
+    .but1:hover,
+    .but2:hover {
         background: #8f8f8f;
-    
+
         cursor: pointer;
     }
 
-    .sel0:hover, .sel1:hover, .sel2:hover{
-        .logo0, .logo1, .logo2{
+    .sel0:hover,
+    .sel1:hover,
+    .sel2:hover {
+
+        .logo0,
+        .logo1,
+        .logo2 {
             transform: translateY(-75px);
-    
+
             animation-name: logoup;
             animation-duration: $anim_dur;
         }
-    
-        .but0, .but1, .but2{
+
+        .but0,
+        .but1,
+        .but2 {
             transform: translateY(0px);
-    
+
             animation-name: butup;
             animation-duration: $anim_dur;
-    
+
             opacity: 100%;
         }
     }
 }
 
 @keyframes logoup {
-    from {transform: translateY(0px);}
-    to {transform: translateY(-75px);}
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-75px);
+    }
 }
 
 @keyframes butup {
-    from {transform: translateY(75px); opacity: 0%;}
-    to {transform: translateY(0px); opacity: 100%;}
+    from {
+        transform: translateY(75px);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
 }
 
 @keyframes logodown {
-    from {transform: translateY(-75px);}
-    to {transform: translateY(0px);}
+    from {
+        transform: translateY(-75px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes butdown {
-    from {transform: translateY(0px); opacity: 100%;}
-    to {transform: translateY(75px); opacity: 0%;}
+    from {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateY(75px);
+        opacity: 0%;
+    }
 }
 
 @keyframes titleon {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 @keyframes selectoron {
-    0% {opacity: 0%; transform: translateY(50px);}
-    60% {opacity: 0%; transform: translateY(50px);}
-    100% {opacity: 100%; transform: translateY(0px);}
+    0% {
+        opacity: 0%;
+        transform: translateY(50px);
+    }
+
+    60% {
+        opacity: 0%;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
 }

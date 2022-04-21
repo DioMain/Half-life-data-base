@@ -33,7 +33,8 @@ $size: 48px;
         flex-grow: 100;
     }
 
-    .github a img, .vk a img {
+    .github a img,
+    .vk a img {
         height: $size;
         width: $size;
     }
