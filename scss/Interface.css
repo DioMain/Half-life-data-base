@@ -86,6 +86,18 @@
     margin-top: 14px;
     font-size: 25px !important;
   }
+  .FastUpScroll {
+    top: 39%;
+    width: 150px;
+  }
+  .FastUpScroll .FUS_bg {
+    width: 111px;
+    height: 204px;
+    border-radius: 27px;
+  }
+  .FastUpScroll .FUS_bg img {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1549px) {
@@ -155,6 +167,18 @@
   .selectbar .selectbarbg .sbbut4 .sbbut4t {
     font-size: 25px !important;
     margin-top: 12px;
+  }
+  .FastUpScroll {
+    top: 43%;
+    width: 125px;
+  }
+  .FastUpScroll .FUS_bg {
+    width: 90px;
+    height: 150px;
+    border-radius: 20px;
+  }
+  .FastUpScroll .FUS_bg img {
+    margin-top: 37px;
   }
 }
 
@@ -250,6 +274,18 @@
     font-size: 14px !important;
     margin-top: 8px;
   }
+  .FastUpScroll {
+    top: 43%;
+    width: 65px;
+  }
+  .FastUpScroll .FUS_bg {
+    width: 60px;
+    height: 100px;
+    border-radius: 12px;
+  }
+  .FastUpScroll .FUS_bg img {
+    margin-top: 25px;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -300,6 +336,12 @@
     -webkit-transform: translateY(0px) !important;
             transform: translateY(0px) !important;
   }
+  .FastUpScroll:hover .FUS_bg {
+    -webkit-animation-name: none !important;
+            animation-name: none !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
   .selectbar .selectbarbg {
     -ms-grid-columns: auto auto auto auto auto;
         grid-template-columns: auto auto auto auto auto;
@@ -346,6 +388,22 @@
     font-size: 10px !important;
     margin-top: 11px;
   }
+  .FastUpScroll {
+    top: 70px;
+    width: 65px;
+  }
+  .FastUpScroll .FUS_bg {
+    width: 50px;
+    height: 80px;
+    border-radius: 12px;
+    -webkit-animation-name: none !important;
+            animation-name: none !important;
+    -webkit-transform: translateX(0px) !important;
+            transform: translateX(0px) !important;
+  }
+  .FastUpScroll .FUS_bg img {
+    margin-top: 18px;
+  }
 }
 
 .sbbut0:hover,
@@ -355,13 +413,6 @@
 .sbbut4:hover,
 .RTM_bg:hover {
   cursor: pointer;
-}
-
-body {
-  background-image: url(../data/img/Art3.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  margin: 0;
 }
 
 .ReturnToMenu {
@@ -529,6 +580,47 @@ body {
 .selectbar .selectbarbg .sbbut4:hover {
   -webkit-box-shadow: 0 0 12px 2px #FFB257;
           box-shadow: 0 0 12px 2px #FFB257;
+}
+
+.FastUpScroll {
+  position: fixed;
+  height: auto;
+  right: 0;
+}
+
+.FastUpScroll .FUS_bg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(217, 217, 217, 0.18);
+  border: 2px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation-name: scroll_out;
+          animation-name: scroll_out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.FastUpScroll .FUS_bg img {
+  display: block;
+  width: 90%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.FastUpScroll:hover .FUS_bg {
+  -webkit-animation-name: scroll_in;
+          animation-name: scroll_in;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @-webkit-keyframes sellector_out {
@@ -700,6 +792,50 @@ body {
   0% {
     -webkit-transform: translateX(-40px);
             transform: translateX(-40px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes scroll_out {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@keyframes scroll_out {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@-webkit-keyframes scroll_in {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes scroll_in {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
   }
   100% {
     -webkit-transform: translateX(0px);

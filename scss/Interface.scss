@@ -2,9 +2,11 @@ $sbbuttonborder: 23px;
 
 $sellector_anim_dur: 0.2s;
 $returntomenu_anim_dur: 0.1s;
+$scroll_anim_dur: 0.3s;
 
 $sellector_inhideY: -75px;
 $returntomenu_inhideX: -75px;
+$scroll_inhideX: 200px;
 
 //Source code medium
 @font-face {
@@ -146,6 +148,13 @@ $returntomenu_inhideX: -75px;
             transform: translateY(0px) !important;
         }
     }
+
+    .FastUpScroll:hover{
+        .FUS_bg {
+            animation-name: none !important; 
+            transform: translateX(0) !important;
+        }
+    }
 }
 
 @media screen and (min-width: 1550px) {
@@ -191,6 +200,22 @@ $returntomenu_inhideX: -75px;
 
                     font-size: 25px !important;
                 }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 39%; 
+        width: 150px;
+    
+        .FUS_bg {
+            width: 111px;
+            height: 204px;
+
+            border-radius: 27px;
+    
+            img{
+                margin-top: 45px;
             }
         }
     }
@@ -240,6 +265,22 @@ $returntomenu_inhideX: -75px;
             }
         }
     }
+
+    .FastUpScroll {  
+        top: 43%; 
+        width: 125px;
+    
+        .FUS_bg {
+            width: 90px;
+            height: 150px;
+
+            border-radius: 20px;
+    
+            img{
+                margin-top: 37px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 1199px) {
@@ -285,6 +326,22 @@ $returntomenu_inhideX: -75px;
                     font-size: 14px !important;
                     margin-top: 8px;
                 }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 43%; 
+        width: 65px;
+    
+        .FUS_bg {
+            width: 60px;
+            height: 100px;
+
+            border-radius: 12px;
+    
+            img{
+                margin-top: 25px;
             }
         }
     }
@@ -340,6 +397,25 @@ $returntomenu_inhideX: -75px;
             }
         }
     }
+
+    .FastUpScroll {  
+        top: 70px; 
+        width: 65px;
+    
+        .FUS_bg {
+            width: 50px;
+            height: 80px;
+
+            border-radius: 12px;
+
+            animation-name: none !important; 
+            transform: translateX(0px) !important;
+    
+            img{
+                margin-top: 18px;
+            }
+        }
+    }
 }
 
 .sbbut0:hover,
@@ -349,14 +425,6 @@ $returntomenu_inhideX: -75px;
 .sbbut4:hover,
 .RTM_bg:hover {
     cursor: pointer;
-}
-
-body {
-    background-image: url(../data/img/Art3.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-
-    margin: 0;
 }
 
 .ReturnToMenu {
@@ -517,6 +585,48 @@ body {
     }
 }
 
+.FastUpScroll {
+    position: fixed;
+
+    height: auto;
+
+    right: 0;
+
+    .FUS_bg {
+        display: block;
+
+        @include automargin();
+
+        background: rgba(217, 217, 217, 0.18);
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        animation-name: scroll_out;
+        animation-duration: $scroll_anim_dur;
+
+        transform: translateX($scroll_inhideX);
+
+        img{
+            display: block;
+
+            width: 90%;
+            height: 50%;
+
+            @include automargin();
+
+            object-fit: contain;
+        }
+    }
+}
+
+.FastUpScroll:hover{
+    .FUS_bg {
+        animation-name: scroll_in;
+        animation-duration: $scroll_anim_dur;
+
+        transform: translateX(0);
+    }
+}
+
 @keyframes sellector_out {
     0% {
         transform: translateY(0px);
@@ -590,6 +700,26 @@ body {
 @keyframes return_in_low {
     0% {
         transform: translateX($returntomenu_inhideX + 35px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes scroll_out {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($scroll_inhideX);
+    }
+}
+
+@keyframes scroll_in {
+    0% {
+        transform: translateX($scroll_inhideX);
     }
 
     100% {

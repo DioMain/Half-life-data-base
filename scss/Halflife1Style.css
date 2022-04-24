@@ -17,4 +17,11 @@
   font-family: "scr";
   src: url(../data/fonts/sourcecodepro/Sourcecodepro.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodepro.woff2) format("woff2");
 }
+
+body {
+  background-image: url(../data/img/Art3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
 /*# sourceMappingURL=Halflife1Style.css.map */
