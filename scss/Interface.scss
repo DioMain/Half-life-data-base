@@ -431,6 +431,10 @@ $scroll_inhideX: 200px;
     position: fixed;
 
     .RTM_bg {
+        display: block;
+
+        text-decoration: none;
+
         width: inherit;
         height: inherit;
 
@@ -501,6 +505,9 @@ $scroll_inhideX: 200px;
         transform: translateY($sellector_inhideY);
 
         .sbbut0 {
+            display: block;
+
+            text-decoration: none;
 
             background: #C5BFB2;
 
@@ -528,6 +535,10 @@ $scroll_inhideX: 200px;
         .sbbut2,
         .sbbut3,
         .sbbut4 {
+            display: block;
+            text-decoration: none;
+
+            color: #000000;
 
             @include automargin();
 

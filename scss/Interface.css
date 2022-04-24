@@ -420,6 +420,8 @@
 }
 
 .ReturnToMenu .RTM_bg {
+  display: block;
+  text-decoration: none;
   width: inherit;
   height: inherit;
   background: rgba(138, 138, 138, 0.75);
@@ -487,6 +489,8 @@
 }
 
 .selectbar .selectbarbg .sbbut0 {
+  display: block;
+  text-decoration: none;
   background: #C5BFB2;
   margin-left: auto;
   margin-right: auto;
@@ -511,6 +515,9 @@
 .selectbar .selectbarbg .sbbut2,
 .selectbar .selectbarbg .sbbut3,
 .selectbar .selectbarbg .sbbut4 {
+  display: block;
+  text-decoration: none;
+  color: #000000;
   margin-left: auto;
   margin-right: auto;
   border-radius: 23px;
