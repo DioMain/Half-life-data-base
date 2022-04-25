@@ -92,6 +92,23 @@
     }
 }
 
+// def = (37px, 40px, 19px)
+@mixin topic_t4($border_r, $h3_font, $p_font) {
+    border-radius: $border_r;
+
+    h3 {
+        font-size: $h3_font;
+    }
+
+    p {
+        font-size: $p_font;
+    }
+
+    a {
+        font-size: $p_font;
+    }
+}
+
 @media screen and (min-width: 1550px) {
     .article_container {
         .article_title {
@@ -133,6 +150,10 @@
                 .topic_t3_2imgs {
                     grid-template-columns: 50% 50%;
                 }
+            }
+
+            .topic_type4 {
+                @include topic_t4($border_r, $h3_font, $p_font)
             }
         }
     }
@@ -181,6 +202,10 @@
                     grid-template-columns: 50% 50%;
                 }
             }
+
+            .topic_type4 {
+                @include topic_t4($border_r, $h3_font, $p_font)
+            }
         }
     }
 }
@@ -226,6 +251,10 @@
                 .topic_t3_2imgs {
                     grid-template-columns: 50% 50%;
                 }
+            }
+
+            .topic_type4 {
+                @include topic_t4($border_r, $h3_font, $p_font)
             }
         }
     }
@@ -314,6 +343,10 @@
                         @include automargin();
                     }
                 }
+            }
+
+            .topic_type4 {
+                @include topic_t4($border_r, $h3_font, $p_font)
             }
         }
     }
@@ -570,6 +603,51 @@
 
                     @include automargin();
                 }
+            }
+        }
+
+        .topic_type4 {
+            display: grid;
+            grid-auto-rows: auto;
+
+            background: rgba(0%, 0%, 0%, 0.5);
+
+            h3 {
+                font-family: 'scs';
+                text-align: center;
+
+                //margin: 20px;
+
+                line-height: 50px;
+                letter-spacing: 0.105em;
+
+                color: #FFFFFF;
+            }
+
+            p {
+                font-family: 'scm';
+
+                line-height: 135%;
+                letter-spacing: 0.045em;
+                text-indent: 25px;
+
+                padding: 15px;
+                margin: 0;
+
+                color: #FFFFFF;
+            }
+
+            a {
+                font-family: 'scm';
+
+                line-height: 135%;
+                letter-spacing: 0.045em;
+                text-indent: 25px;
+
+                padding-bottom: 15px;
+                margin: 0;
+
+                color: #FFFFFF;
             }
         }
     }
