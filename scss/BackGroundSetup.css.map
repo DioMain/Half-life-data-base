@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,0BAA0B;EAC5C,qBAAqB,EAAE,KAAK;EAC5B,eAAe,EAAE,KAAK;EAEtB,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "BackGroundSetup.scss"
+    ],
+    "names": [],
+    "file": "BackGroundSetup.css"
+}
