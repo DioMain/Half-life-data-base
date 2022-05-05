@@ -44,9 +44,9 @@ $returntomenu_inhideX: -75px;
 }
 
 //In percents
-//(def) = (6%, 4%, 7%, 3.6%, 4%, 11.6%, 12%, 3.7%, 16.8%, 4%, 7%, 3.5%)
+//(def) = (6%, 4%, 11.8%, 5%, 10.7%, 11.6%, 4%, 16.8%, 5%, 6%, 3.6%)
 @mixin timeline_lines($l1, $l2, $l3, $l4, $l5, $l6,
-    $l7, $l8, $l9, $l10, $l11, $l12) {
+    $l7, $l8, $l9, $l10, $l11) {
     #dl1 {
         margin-left: $l1;
     }
@@ -55,31 +55,31 @@ $returntomenu_inhideX: -75px;
         margin-left: $l2;
     }
 
-    #dls2 {
+    #dl2 {
         margin-left: $l3;
     }
 
-    #dl2 {
+    #dls2 {
         margin-left: $l4;
     }
 
-    #dls3 {
+    #dl3 {
         margin-left: $l5;
     }
 
-    #dl3 {
+    #dls3 {
         margin-left: $l6;
     }
 
-    #dls4 {
+    #dl4 {
         margin-left: $l7;
     }
 
-    #dl4 {
+    #dl5 {
         margin-left: $l8;
     }
 
-    #dl5 {
+    #dls4 {
         margin-left: $l9;
     }
 
@@ -87,12 +87,8 @@ $returntomenu_inhideX: -75px;
         margin-left: $l10;
     }
 
-    #dls6 {
-        margin-left: $l11;
-    }
-
     #dl6 {
-        margin-left: $l12;
+        margin-left: $l11;
     }
 }
 
@@ -136,8 +132,8 @@ $returntomenu_inhideX: -75px;
                         transform: translateY($dateline_offsetY);
                     }
 
-                    @include timeline_lines(6%, 4%, 7%, 3.6%, 4%, 11.6%,
-                        12%, 3.7%, 16.8%, 4%, 7%, 3.5%);
+                    @include timeline_lines(6%, 4%, 11.8%, 5%, 10.7%, 11.6%,
+                            4%, 16.8%, 5%, 6%, 3.6%);
                 }
             }
 
@@ -199,8 +195,8 @@ $returntomenu_inhideX: -75px;
                         transform: translateY($dateline_offsetY);
                     }
 
-                    @include timeline_lines(6%, 3%, 7%, 3.5%, 4%, 10.9%,
-                        11.8%, 3.3%, 16.5%, 4%, 6%, 3.5%);
+                    @include timeline_lines(6%, 4%, 11%, 5%, 10%, 11.1%,
+                            4%, 16.5%, 5%, 5.4%, 3%);
                 }
             }
 
@@ -262,8 +258,8 @@ $returntomenu_inhideX: -75px;
                         transform: translateY($dateline_offsetY);
                     }
 
-                    @include timeline_lines(5.9%, 3%, 5%, 2.9%, 4%, 9.3%,
-                        10.2%, 3.3%, 15.7%, 4%, 4.5%, 2.5%);
+                    @include timeline_lines(6%, 4%, 9.3%, 5%, 8.3%, 9.4%,
+                            4%, 15.8%, 3.5%, 5%, 2.5%);
                 }
             }
 
@@ -325,8 +321,8 @@ $returntomenu_inhideX: -75px;
                         transform: translateY($dateline_offsetY);
                     }
 
-                    @include timeline_lines(5.8%, 1.5%, 1.5%, 2%, 4%, 5.7%,
-                        6%, 3.3%, 14.5%, 1.5%, 1.5%, 2%);
+                    @include timeline_lines(6%, 2%, 7.2%, 4.5%, 5.2%, 7%,
+                            2.8%, 14.4%, 1%, 2%, 2%);
                 }
             }
 
@@ -468,22 +464,18 @@ body {
                     }
 
                     #dls2:hover {
-                        background: #f55742;
-                    }
-
-                    #dls3:hover {
                         background: goldenrod;
                     }
 
-                    #dls4:hover {
+                    #dls3:hover {
                         background: green;
                     }
 
-                    #dls5:hover {
+                    #dls4:hover {
                         background: #db4f2c;
                     }
 
-                    #dls6:hover {
+                    #dls5:hover {
                         background: #4f45ff;
                     }
 

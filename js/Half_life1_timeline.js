@@ -13,15 +13,6 @@ function sellect(value) {
             "<br><br> Что бы узнать больше нажмите на выбранный тайм-лайн...";  
             break;
         case 2:
-            Dsc_title.innerHTML = "Quiver";
-            Dsc_title.style = "color: #f55742";
-
-            Dsc_info.innerHTML = "Самая ранняя версия Half-life, где было перепробовано множество идей," + 
-            " которые не попали в релизную версию игры. Так на пример игры называлась" + 
-            " “Quiver” а не “Half-life”. Главного героя звали не “Гордон Фримен” а “Иван Космо-байкер”." + 
-            "<br><br> Что бы узнать больше нажмите на выбранный тайм-лайн...";
-            break;
-        case 3:
             Dsc_title.innerHTML = "Half-life";
             Dsc_title.style = "color: goldenrod";
 
@@ -31,7 +22,7 @@ function sellect(value) {
             " вторжение инопланетян через меж пространственный разлом." + 
             "<br><br> Что бы узнать больше нажмите на выбранный тайм-лайн...";  
              break;
-        case 4:
+        case 3:
             Dsc_title.innerHTML = "Half-life:opposing force";
             Dsc_title.style = "color: green";
 
@@ -41,7 +32,7 @@ function sellect(value) {
             " в виде расы-X, а так же чёрные оперативники." + 
             "<br><br> Что бы узнать больше нажмите на выбранный тайм-лайн...";  
             break;
-        case 5:
+        case 4:
             Dsc_title.innerHTML = "Half-life:decay";
             Dsc_title.style = "color: #db4f2c";
 
@@ -52,7 +43,7 @@ function sellect(value) {
             " спутник, который позже запускает Фримен в Half-Life." + 
             "<br><br> Что бы узнать больше нажмите на выбранный тайм-лайн...";  
             break;
-        case 6:
+        case 5:
             Dsc_title.innerHTML = "Half-life:blue shift";
             Dsc_title.style = "color: #4f45ff";
 
