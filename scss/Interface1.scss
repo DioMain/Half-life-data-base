@@ -1,0 +1,739 @@
+$sbbuttonborder: 23px;
+
+$sellector_anim_dur: 0.2s;
+$returntomenu_anim_dur: 0.1s;
+$scroll_anim_dur: 0.3s;
+
+$sellector_inhideY: -75px;
+$returntomenu_inhideX: -75px;
+$scroll_inhideX: 200px;
+
+//Source code medium
+@font-face {
+    font-family: "scm";
+    src: url(../data/fonts/sourcecodepro/Sourcecodepromedium.ttf) format("ttf"),
+        url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff) format("woff"),
+        url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff2) format("woff2");
+}
+
+//Source code semibold
+@font-face {
+    font-family: "scs";
+    src: url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.ttf) format("ttf"),
+        url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.woff) format("woff"),
+        url(../data/fonts/sourcecodepro/Sourcecodeprosemibold.woff2) format("woff2");
+}
+
+//Source code light
+@font-face {
+    font-family: "scl";
+    src: url(../data/fonts/sourcecodepro/Sourcecodeprolight.ttf) format("ttf"),
+        url(../data/fonts/sourcecodepro/Sourcecodeprolight.woff) format("woff"),
+        url(../data/fonts/sourcecodepro/Sourcecodeprolight.woff2) format("woff2");
+}
+
+//Source code regular
+@font-face {
+    font-family: "scr";
+    src: url(../data/fonts/sourcecodepro/Sourcecodepro.ttf) format("ttf"),
+        url(../data/fonts/sourcecodepro/Sourcecodepro.woff) format("woff"),
+        url(../data/fonts/sourcecodepro/Sourcecodepro.woff2) format("woff2");
+}
+
+@mixin automargin() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin _sbbutscale($w, $h, $m_t) {
+    width: $w;
+    height: $h;
+
+    margin-top: $m_t;
+}
+
+//(def) = (141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px)
+@mixin return_to_menu($width, $height, $left, $top, $borderr,
+    $margint, $marginl, $fontsize) {
+    .ReturnToMenu {
+        width: $width;
+        height: $height;
+
+        left: $left;
+        top: $top;
+
+        .RTM_bg {
+            border-radius: $borderr;
+        }
+
+        .RTM_txt {
+            margin-top: $margint;
+            margin-left: $marginl;
+
+            font-size: $fontsize;
+        }
+    }
+}
+
+//(def) = (116px, -65px, 20px, 37px)
+@mixin select_bar_basic($height, $top, $grid_gap_padding, $borderr) {
+    .selectbar {
+        height: $height;
+        top: $top;
+
+        .selectbarbg {
+            grid-gap: $grid_gap_padding;
+            padding: $grid_gap_padding;
+
+            border-radius: $borderr;
+        }
+    }
+}
+
+@mixin low_animation {
+    .ReturnToMenu {
+        .RTM_bg {
+            transform: translateX($returntomenu_inhideX + 35px) !important;
+            animation-name: return_out_low !important;
+        }
+    }
+
+    .ReturnToMenu:hover {
+        .RTM_bg {
+            transform: translateX(0px) !important;
+            animation-name: return_in_low !important;
+        }
+    }
+
+    .selectbar {
+        .selectbarbg {
+            animation-name: sellector_out_low !important;
+            transform: translateY($sellector_inhideY + 35px) !important;
+        }
+    }
+
+    .selectbar:hover {
+        .selectbarbg {
+            animation-name: sellector_in_low !important;
+            transform: translateY(0px) !important;
+        }
+    }
+}
+
+@mixin disable_animation {
+    .ReturnToMenu {
+        .RTM_bg {
+            transform: translateX(0px) !important;
+            animation-name: none !important;
+        }
+    }
+
+    .ReturnToMenu:hover {
+        .RTM_bg {
+            transform: translateX(0px) !important;
+            animation-name: none !important;
+        }
+    }
+
+    .selectbar {
+        .selectbarbg {
+            animation-name: none !important;
+            transform: translateY(0px) !important;
+        }
+    }
+
+    .selectbar:hover {
+        .selectbarbg {
+            animation-name: none !important;
+            transform: translateY(0px) !important;
+        }
+    }
+
+    .FastUpScroll:hover{
+        .FUS_bg {
+            animation-name: none !important; 
+            transform: translateX(0) !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1550px) {
+
+    @include return_to_menu(141px, 71px, -44px, 75px, 24px, 8px, 35px, 24px);
+
+    @include select_bar_basic(116px, -65px, 20px, 37px);
+
+    $button_height: 55px;
+
+    .selectbar {
+        .selectbarbg {
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t {
+                    margin-top: 8px;
+
+                    font-size: 36px;
+                }
+            }
+
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
+                    font-size: 20px;
+                    margin-top: 7px;
+                }
+            }
+
+            .sbbut2 {
+                .sbbut2t{
+                    margin-top: 14px !important;
+
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 39%; 
+        width: 150px;
+    
+        .FUS_bg {
+            width: 111px;
+            height: 204px;
+
+            border-radius: 27px;
+    
+            img{
+                margin-top: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+
+    @include return_to_menu(120px, 71px, -35px, 85px, 24px, 10px, 25px, 21px);
+
+    @include select_bar_basic(100px, -50px, 15px, 25px);
+
+    $button_height: 50px;
+
+    .selectbar {
+        .selectbarbg {
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t {
+                    margin-top: 7px;
+                    font-size: 28px;
+                }
+            }
+
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
+                    font-size: 19px;
+                    margin-top: 6px;
+                }
+            }
+
+            .sbbut2 {
+                .sbbut2t{
+                    margin-top: 13px !important;
+                    font-size: 21px !important;
+                }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 43%; 
+        width: 125px;
+    
+        .FUS_bg {
+            width: 90px;
+            height: 150px;
+
+            border-radius: 20px;
+    
+            img{
+                margin-top: 37px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1199px) {
+
+    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
+
+    @include select_bar_basic(86px, -60px, 9px, 23px);
+
+    @include low_animation();
+
+    $button_height: 30px;
+
+    .selectbar {
+        .selectbarbg {
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut0t {
+                    margin-top: 7px;
+                    font-size: 14px;
+                }
+            }
+
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
+                    font-size: 12px;
+                    margin-top: 3px;
+                }
+            }
+
+            .sbbut2 {
+                .sbbut2t {
+                    font-size: 14px !important;
+                    margin-top: 8px !important;
+                }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 43%; 
+        width: 65px;
+    
+        .FUS_bg {
+            width: 60px;
+            height: 100px;
+
+            border-radius: 12px;
+    
+            img{
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 749px) {
+
+    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
+
+    @include select_bar_basic(60px, -27px, 5px, 16px);
+
+    @include disable_animation();
+
+    $button_height: 33px;
+
+    .selectbar {
+        .selectbarbg {
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                border-radius: 12px !important;
+
+                .sbbut0t {
+                    margin-top: 7px;
+                    font-size: 12px;
+                }
+            }
+
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                border-radius: 12px !important;
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
+                    font-size: 8px;
+                    margin-top: 7px;
+                }
+            }
+
+            .sbbut2 {
+                .sbbut2t {
+                    font-size: 9px !important;
+                    margin-top: 11px !important;
+                }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 70px; 
+        width: 65px;
+    
+        .FUS_bg {
+            width: 50px;
+            height: 80px;
+
+            border-radius: 12px;
+
+            animation-name: none !important; 
+            transform: translateX(0px) !important;
+    
+            img{
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
+.sbbut0:hover,
+.sbbut1:hover,
+.sbbut2:hover,
+.sbbut3:hover,
+.sbbut4:hover,
+.RTM_bg:hover {
+    cursor: pointer;
+}
+
+.ReturnToMenu {
+    position: fixed;
+
+    .RTM_bg {
+        display: block;
+
+        text-decoration: none;
+
+        width: inherit;
+        height: inherit;
+
+        background: rgba(138, 138, 138, 0.75);
+        border: 2px solid #000000;
+        box-sizing: border-box;
+
+        transform: translateX($returntomenu_inhideX);
+
+        animation-name: return_out;
+        animation-duration: $returntomenu_anim_dur;
+
+        .RTM_txt {
+            font-family: 'scr';
+            font-style: normal;
+
+            font-weight: bolder;
+            line-height: 100%;
+
+            text-align: center;
+
+            letter-spacing: 0.1em;
+
+            color: #121212;
+        }
+    }
+}
+
+.ReturnToMenu:hover {
+    .RTM_bg {
+        transform: translateX(0px);
+
+        animation-name: return_in;
+        animation-duration: $returntomenu_anim_dur;
+    }
+}
+
+.selectbar:hover {
+    .selectbarbg {
+        transform: translateY(0px);
+
+        animation-name: sellector_in;
+        animation-duration: $sellector_anim_dur;
+    }
+}
+
+.selectbar {
+    position: fixed;
+
+    width: 100%;
+
+    .selectbarbg {
+        width: 75%;
+
+        @include automargin();
+
+        display: grid;
+
+        height: inherit;
+
+        background: rgba(109, 109, 109, 0.6);
+        box-shadow: 0px 4px 17px 5px rgba(33, 14, 0, 0.25);
+        border: 1px solid #000000;
+
+        animation-name: sellector_out;
+        animation-duration: $sellector_anim_dur;
+
+        transform: translateY($sellector_inhideY);
+
+        .sbbut0 {
+            display: block;
+
+            text-decoration: none;
+
+            background: #C5BFB2;
+
+            @include automargin();
+            border-radius: $sbbuttonborder;
+
+            .sbbut0t {
+                font-family: 'scs';
+                font-style: normal;
+
+                line-height: 100%;
+
+                align-items: center;
+                text-align: center;
+                text-decoration-line: underline;
+
+                color: #000000;
+
+                text-shadow: 1px 0px 3px #7C3400;
+            }
+
+        }
+
+        .sbbut1,
+        .sbbut2,
+        .sbbut3,
+        .sbbut4 {
+            display: block;
+            text-decoration: none;
+
+            color: #000000;
+
+            @include automargin();
+
+            border-radius: $sbbuttonborder;
+
+            .sbbut1t,
+            .sbbut2t,
+            .sbbut3t,
+            .sbbut4t {
+                font-family: 'scm';
+                font-style: normal;
+
+                line-height: 100%;
+
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .sbbut1 {
+            background: #632b00;
+        }
+
+        .sbbut2 {
+            background: #d48300;
+        }
+
+        .sbbut3 {
+            background: #c49a56;
+        }
+
+        .sbbut4 {
+            background: #bdac91;
+        }
+
+        .sbbut0:hover {
+            box-shadow: 0 0 15px 2px #C5BFB2;
+        }
+
+        .sbbut1:hover {
+            box-shadow: 0 0 12px 2px #632b00;
+        }
+
+        .sbbut2:hover {
+            box-shadow: 0 0 12px 2px #d48300;
+        }
+
+        .sbbut3:hover {
+            box-shadow: 0 0 12px 2px #c49a56;
+        }
+
+        .sbbut4:hover {
+            box-shadow: 0 0 12px 2px #bdac91;
+        }
+    }
+}
+
+.FastUpScroll {
+    position: fixed;
+
+    height: auto;
+
+    right: 0;
+
+    .FUS_bg {
+        display: block;
+
+        @include automargin();
+
+        background: rgba(217, 217, 217, 0.18);
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        animation-name: scroll_out;
+        animation-duration: $scroll_anim_dur;
+
+        transform: translateX($scroll_inhideX);
+
+        img{
+            display: block;
+
+            width: 90%;
+            height: 50%;
+
+            @include automargin();
+
+            object-fit: contain;
+        }
+    }
+}
+
+.FastUpScroll:hover{
+    .FUS_bg {
+        animation-name: scroll_in;
+        animation-duration: $scroll_anim_dur;
+
+        transform: translateX(0);
+    }
+}
+
+@keyframes sellector_out {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY($sellector_inhideY);
+    }
+}
+
+@keyframes sellector_in {
+    0% {
+        transform: translateY($sellector_inhideY);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes sellector_out_low {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY($sellector_inhideY + 35px);
+    }
+}
+
+@keyframes sellector_in_low {
+    0% {
+        transform: translateY($sellector_inhideY + 35px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes return_out {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($returntomenu_inhideX);
+    }
+}
+
+@keyframes return_in {
+    0% {
+        transform: translateX($returntomenu_inhideX);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes return_out_low {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($returntomenu_inhideX + 35px);
+    }
+}
+
+@keyframes return_in_low {
+    0% {
+        transform: translateX($returntomenu_inhideX + 35px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes scroll_out {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX($scroll_inhideX);
+    }
+}
+
+@keyframes scroll_in {
+    0% {
+        transform: translateX($scroll_inhideX);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
