@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,yBAAyB;EAC3C,qBAAqB,EAAE,KAAK;EAC5B,eAAe,EAAE,KAAK;EAEtB,MAAM,EAAE,CAAC;CACZ",
     "sources": [
-        "Halflife1Style.scss"
+        "Prospero.scss"
     ],
     "names": [],
-    "file": "Halflife1Style.css"
+    "file": "Prospero.css"
 }
