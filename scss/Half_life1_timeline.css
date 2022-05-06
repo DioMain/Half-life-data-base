@@ -249,7 +249,7 @@
   }
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (min-width: 440px) and (max-width: 749px) {
   .time_line_container {
     margin-top: 40px;
   }
@@ -323,6 +323,83 @@
   }
   .time_line_container .tlbg .Description .DscInfo {
     font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .time_line_container {
+    margin-top: 40px;
+  }
+  .time_line_container .time_line {
+    width: 310px;
+  }
+  .time_line_container .tltitle {
+    font-size: 40px;
+  }
+  .time_line_container .tlbg {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 250px;
+  }
+  .time_line_container .tlbg .line_contrainer .date_txt {
+    font-size: 18px;
+  }
+  .time_line_container .tlbg .line_contrainer .line {
+    height: 55px;
+    border-radius: 20px;
+    margin-top: 37px;
+  }
+  .time_line_container .tlbg .line_contrainer .line .date_line {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  .time_line_container .tlbg .line_contrainer .line .date_line_sellecter {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl1 {
+    margin-left: 6%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dls1 {
+    margin-left: 2%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl2 {
+    margin-left: 4.5%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dls2 {
+    margin-left: 4%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl3 {
+    margin-left: 2.5%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dls3 {
+    margin-left: 4%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl4 {
+    margin-left: 2.8%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl5 {
+    margin-left: 13.5%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dls4 {
+    margin-left: 0.25%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dls5 {
+    margin-left: 0%;
+  }
+  .time_line_container .tlbg .line_contrainer .line #dl6 {
+    margin-left: 0.25%;
+  }
+  .time_line_container .tlbg .Description {
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 18px;
+  }
+  .time_line_container .tlbg .Description .DscTitle {
+    font-size: 16px;
+  }
+  .time_line_container .tlbg .Description .DscInfo {
+    font-size: 7px;
   }
 }
 

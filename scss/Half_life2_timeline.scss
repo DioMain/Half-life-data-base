@@ -277,7 +277,7 @@ $returntomenu_inhideX: -75px;
     }
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (min-width: 440px) and (max-width: 749px) {
     $tlbg_padding: 10px;
     $description_padding: 8px;
     $dateline_offsetY: -7px;
@@ -334,6 +334,69 @@ $returntomenu_inhideX: -75px;
 
                 .DscInfo {
                     font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 439px) {
+    $tlbg_padding: 10px;
+    $description_padding: 8px;
+    $dateline_offsetY: -7px;
+
+    .time_line_container {
+        margin-top: 40px;
+
+        .time_line {
+            width: 310px;
+        }
+
+        .tltitle {
+            font-size: 40px;
+        }
+
+        .tlbg {
+            padding-left: $tlbg_padding;
+            padding-right: $tlbg_padding;
+
+            width: 250px;
+
+            .line_contrainer {
+                .date_txt {
+                    font-size: 18px;
+                }
+
+                .line {
+                    height: 55px;
+                    border-radius: 20px;
+                    margin-top: 37px;
+
+                    .date_line {
+                        transform: translateY($dateline_offsetY);
+                    }
+
+                    .date_line_sellecter {
+                        transform: translateY($dateline_offsetY);
+                    }
+
+                    @include timeline_lines(5.5%, 2%, 5%, 3.5%, 3.2%, 4%,
+                            2.7%, 13%, 2.9%, 4%);
+                }
+            }
+
+            .Description {
+                padding-left: $description_padding;
+                padding-right: $description_padding;
+
+                border-radius: 18px;
+
+                .DscTitle {
+                    font-size: 16px;
+                }
+
+                .DscInfo {
+                    font-size: 7px;
                 }
             }
         }

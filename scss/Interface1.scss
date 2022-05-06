@@ -347,7 +347,7 @@ $scroll_inhideX: 200px;
     }
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (min-width: 440px) and (max-width: 749px) {
 
     @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
 
@@ -417,6 +417,78 @@ $scroll_inhideX: 200px;
         }
     }
 }
+
+@media screen and (max-width: 439px) {
+
+    @include return_to_menu(90px, 45px, -40px, 85px, 16px, 7px, 35px, 14px);
+
+    @include select_bar_basic(50px, -30px, 3px, 12px);
+
+    @include disable_animation();
+
+    $button_height: 20px;
+
+    .selectbar {
+        .selectbarbg {
+            grid-template-columns: auto auto auto auto auto;
+
+            .sbbut0 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                border-radius: 6px !important;
+
+                .sbbut0t {
+                    margin-top: 4px;
+                    font-size: 8px;
+                }
+            }
+
+            .sbbut1,
+            .sbbut2,
+            .sbbut3,
+            .sbbut4 {
+                @include _sbbutscale(100%, $button_height, auto);
+
+                border-radius: 8px !important;
+
+                .sbbut1t,
+                .sbbut2t,
+                .sbbut3t,
+                .sbbut4t {
+                    font-size: 6px;
+                    margin-top: 6px;
+                }
+            }
+
+            .sbbut2 {
+                .sbbut2t {
+                    font-size: 8px !important;
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+
+    .FastUpScroll {  
+        top: 70px; 
+        width: 65px;
+    
+        .FUS_bg {
+            width: 50px;
+            height: 80px;
+
+            border-radius: 12px;
+
+            animation-name: none !important; 
+            transform: translateX(0px) !important;
+    
+            img{
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
 
 .sbbut0:hover,
 .sbbut1:hover,
