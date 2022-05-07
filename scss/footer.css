@@ -1,6 +1,8 @@
 @font-face {
   font-family: "scm";
-  src: url(../data/fonts/sourcecodepro/Sourcecodepromedium.ttf) format("ttf"), url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff) format("woff"), url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff2) format("woff2");
+  src: url(../data/fonts/sourcecodepro/Sourcecodepromedium.ttf) format("ttf"), 
+      url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff) format("woff"), 
+      url(../data/fonts/sourcecodepro/Sourcecodepromedium.woff2) format("woff2");
 }
 
 .footer_info {
