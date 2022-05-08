@@ -26,13 +26,16 @@ function sellect(value) {
             Dsc_title.innerHTML = "Half-life 2: ep 1";
             Dsc_title.style = "color: #c49a56";
 
-            Dsc_info.innerHTML = "Небольшой эпизод";
+            Dsc_info.innerHTML = "Это прямое продолжение истории Half-life 2. Вышла игра сразу через год полсе выхода HL2 в 2005.";
             break;
         case 4:
             Dsc_title.innerHTML = "Half-life 2: ep 2";
             Dsc_title.style = "color: #bdac91";
 
-            Dsc_info.innerHTML = "Завершающий эпизод";
+            Dsc_info.innerHTML = "Продолжая сюжет Half-Life 2 и Episode One, Episode Two состоит из семи глав, повествующих о " +
+            "путешествии Гордона Фримена и Аликс Вэнс через Белую рощу к большой базе Сопротивления, названной в " +
+            "честь леса. После разрушения Цитадели Альянс работает над открытием массивного суперпортала для " +
+            "вызова подкрепления.";
             break;
         default:
             Dsc_title.innerHTML = "Выберете время...";
